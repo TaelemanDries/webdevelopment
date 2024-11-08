@@ -1,0 +1,28 @@
+.checklist {
+    list-style-type: none;
+    padding: 0;
+}
+.checklist li {
+    padding-left: 24px;
+    position: relative;
+}
+.checklist li.checked::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url('../../images/checked.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.checklist li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-image: url('../../images/checkbox.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
