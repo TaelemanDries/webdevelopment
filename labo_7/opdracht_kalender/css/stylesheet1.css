@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    text-align: center;
+    border: 2px solid #000;
+}
+
+thead th {
+    background-color: rgb(170, 170, 200);
+    font-size: 1.5em;
+    padding: 10px;
+}
+.vorige_maand, .volgende_maand {
+    background-color: rgb(220, 220, 220) !important;
+    color: #888;
+}
+
+thead tr:nth-child(2) th {
+    background-color: rgb(35, 37, 70);
+    color: rgb(200, 190, 240);
+}
+
+tbody td {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+tbody td:nth-child(1),
+tbody td:nth-child(7) {
+    background-color: rgb(255, 220, 220);
+}
+
+.holiday {
+    background-color: rgb(250, 120, 120);
+}
