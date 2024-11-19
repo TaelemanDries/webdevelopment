@@ -19,7 +19,7 @@ thead th {
     font-size: 1.5em;
     padding: 10px;
 }
-.vorige_maand, .volgende_maand {
+td.andere_maand {
     background-color: rgb(220, 220, 220) !important;
     color: #888;
 }
@@ -39,6 +39,6 @@ tbody td:nth-child(7) {
     background-color: rgb(255, 220, 220);
 }
 
-.holiday {
+.vakantie {
     background-color: rgb(250, 120, 120);
 }
