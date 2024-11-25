@@ -1,0 +1,74 @@
+body
+{
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
+}
+canvas{
+    width: 95%;
+    height: 95%;
+}
+section
+{
+    display: inline-block;
+    width: 70%;
+    box-sizing: border-box;
+}
+.weekly
+{
+    display: inline-block;
+    float: right;
+    width: 25%;
+    border: 1px groove green;
+    text-align: center;
+    background-image: url("images/cocktail.gif");
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+}
+.weekly a:hover
+{
+    background-color: brown;
+}
+.weekly h1
+{
+    color: rgb(126,0,100);
+}
+.weekly h2
+{
+    color: rgb(125,100,150);
+}
+#guarantee
+{
+    color:rgb(44,44,44);
+    background: #a7cece;
+    margin: 30px;
+    padding: 20px;
+    border: 2px dashed white;
+    font-size: 18px;
+}
+#guarantee img
+{
+    float: left;
+}
+header
+{
+    text-align: center;
+}
+h1
+{
+    color: rgb(0,126,126);
+    font-size: 150%;
+}
+h2
+{
+    color: rgb(0,126,126);
+    font-size: 130%;
+}
+footer
+{
+    font-size: 50%;
+    float: right;
+    width: 100%;
+    text-align: center;
+}
