@@ -18,7 +18,7 @@ section
     display: inline-block;
     float: right;
     width: 25%;
-    border: 1px green;
+    border: 2px solid green;
     text-align: center;
     background-image: url("images/cocktail.gif");
     background-repeat: no-repeat;
