@@ -2,10 +2,8 @@ body
 {
     font-family: Verdana, Helvetica, Arial, sans-serif;
     font-size: 1.2em;
-}
-canvas{
     width: 95%;
-    height: 95%;
+    margin: auto;
 }
 section
 {
