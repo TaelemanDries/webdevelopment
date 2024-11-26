@@ -1,58 +1,105 @@
+/* Algemene body styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #e8f4fa;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
 }
+
+/* Titel styling */
 h1 {
-    color: #004d80;
     text-align: center;
-    font-size: 2.5em;
-    margin-top: 20px;
+    font-size: 3rem;
+    margin: 20px 0;
+    color: #ffd700; /* Gouden kleur */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
-h2 {
-    font-size: 1.4em;
-    color: #0066cc;
-    margin-bottom: 10px;
-    text-align: center;
-}
+
+/* Grid-container */
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexibele kolommen */
+    gap: 20px; /* Ruimte tussen de kaarten */
     padding: 20px;
+    max-width: 1200px; /* Beperkte breedte */
+    margin: 0 auto;
 }
+
+/* Standaard styling voor de secties (kaarten) */
 .labo {
-    background-color: #ffffff;
-    border: 2px solid #b3e0ff;
+    background: white;
+    color: #333;
     border-radius: 10px;
-    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Zachte schaduw */
     padding: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
 }
+
+/* Hover-effect voor kaarten */
 .labo:hover {
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
-    transition: all 0.3s ease;
+    transform: translateY(-5px); /* Lichte beweging omhoog */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Meer schaduw bij hover */
 }
-ol {
-    padding-left: 20px;
+
+/* Schuin kleurvlak als decoratie */
+.labo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    z-index: -1;
+    transform: skewY(-10deg);
+    transform-origin: top left;
 }
-ol li {
-    margin: 10px 0;
+
+/* Titels in secties */
+.labo h2 {
+    font-size: 1.5rem;
+    color: #2575fc; /* Blauwe kleur */
+    margin-bottom: 15px;
 }
-a {
+
+/* Lijst styling */
+.labo ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Styling voor de links in de lijsten */
+.labo ol li {
+    margin-bottom: 10px;
+}
+
+.labo ol li a {
     text-decoration: none;
-    color: #004d80;
+    font-size: 1rem;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Mooie overgangskleur */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background 0.3s, transform 0.2s;
 }
-a:hover {
-    color: #002d4d;
-    text-decoration: underline;
+
+/* Hover-effect voor links */
+.labo ol li a:hover {
+    background: linear-gradient(to right, #feb47b, #ff7e5f); /* Omgedraaide kleur */
+    transform: scale(1.05); /* Lichte vergroting */
 }
-@media (max-width: 768px) {
-    .labo {
-        width: 90%;
-    }
+
+/* Footer styling */
+footer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #fff;
+    margin-top: 40px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
 }
