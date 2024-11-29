@@ -1,0 +1,22 @@
+article {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.25em;
+    overflow: hidden;
+    border: 1px solid #000;
+}
+main :nth-child(even) img
+{
+    margin: 10px;
+    float: right;
+    display: inline-block;
+
+}
+main :nth-child(odd) img
+{
+    margin: 10px;
+    float: left;
+}
+p{
+    display: inline-block;
+}
