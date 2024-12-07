@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>homepage</title>
+    <title>Homepage</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="style/bootstrap-grid.css">
-</head>
+    <link href="css/bootstrap-grid.css" rel="stylesheet">
+   </head>
 <body>
-<header>
+
+<header class="bg-primary text-white text-center">
     <h1>Dries Taeleman</h1>
 </header>
 
-<section>
-    <h2>Personal Information</h2>
-    <ul>
+<section class="container">
+    <div class="row text-center">
+        <div class="col-4">
+            <a href="Hobbies/index.html">Hobbies</a>
+        </div>
+        <div class="col-4">
+            <a href="Likes/index.html">Likes</a>
+        </div>
+        <div class="col-4">
+            <a href="vrienden/index.html">Vrienden</a>
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <h2 class="text-primary">Personal Information</h2>
+    <ul class="list-unstyled">
         <li><strong>Full name:</strong> Dries Taeleman</li>
         <li><strong>Address:</strong> Kloosterstraat 15, Zwalm</li>
         <li><strong>Phone number:</strong> +32 468 04 79 32</li>
         <li><strong>Email address:</strong> dries.taeleman@outlook.be</li>
         <li><strong>Picture:</strong>
-            <img src="../../images/labo1-7/2022-01-24(2).png" alt="Profile Picture">
+            <img src="images/download.jpg" alt="Profile Picture" class="img-fluid rounded-circle" style="max-width: 150px;">
         </li>
     </ul>
 </section>
 
-<a href="Hobbies/index.html">Hobbies</a>
-
-<a href="Likes/index.html">Likes</a>
-
-<a href="vrienden/index.html">vrienden</a>
-<footer>
+<footer class="bg-dark text-white text-center">
     <p>&copy; 2024 Dries Taeleman</p>
 </footer>
 
