@@ -1,105 +1,86 @@
-/* Algemene body styling */
+/* Algemene instellingen */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+    color: #fff;
 }
 
-/* Titel styling */
 h1 {
     text-align: center;
     font-size: 3rem;
     margin: 20px 0;
-    color: #ffd700; /* Gouden kleur */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #f4d03f;
 }
 
-/* Grid-container */
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexibele kolommen */
-    gap: 20px; /* Ruimte tussen de kaarten */
-    padding: 20px;
-    max-width: 1200px; /* Beperkte breedte */
-    margin: 0 auto;
-}
-
-/* Standaard styling voor de secties (kaarten) */
-.labo {
-    background: white;
-    color: #333;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Zachte schaduw */
-    padding: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Hover-effect voor kaarten */
-.labo:hover {
-    transform: translateY(-5px); /* Lichte beweging omhoog */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Meer schaduw bij hover */
-}
-
-/* Schuin kleurvlak als decoratie */
-.labo::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to right, #ff7e5f, #feb47b);
-    z-index: -1;
-    transform: skewY(-10deg);
-    transform-origin: top left;
-}
-
-/* Titels in secties */
-.labo h2 {
-    font-size: 1.5rem;
-    color: #2575fc; /* Blauwe kleur */
+h2 {
+    font-size: 1.8rem;
     margin-bottom: 15px;
+    text-align: center;
+    color: #ff9f43;
+    border-bottom: 2px solid #ff9f43;
+    display: inline-block;
 }
 
-/* Lijst styling */
-.labo ol {
+/* Container opmaak */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Labo blokken */
+.labo {
+    background: #1e3d58;
+    border: 2px solid #ff9f43;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.labo:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Opgave lijst */
+ol {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-/* Styling voor de links in de lijsten */
-.labo ol li {
-    margin-bottom: 10px;
+ol li {
+    margin: 10px 0;
 }
 
-.labo ol li a {
+ol li a {
     text-decoration: none;
-    font-size: 1rem;
-    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Mooie overgangskleur */
-    color: white;
+    color: #ffdd59;
+    font-weight: bold;
+    background: #34495e;
     padding: 10px 15px;
     border-radius: 5px;
-    display: inline-block;
-    transition: background 0.3s, transform 0.2s;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Hover-effect voor links */
-.labo ol li a:hover {
-    background: linear-gradient(to right, #feb47b, #ff7e5f); /* Omgedraaide kleur */
-    transform: scale(1.05); /* Lichte vergroting */
+ol li a:hover {
+    background: #ff9f43;
+    color: #1e3c72;
 }
 
-/* Footer styling */
+/* Footer opmaak */
 footer {
     text-align: center;
-    font-size: 0.8rem;
-    color: #fff;
-    margin-top: 40px;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    font-size: 0.9rem;
+    color: #dcdcdc;
 }
