@@ -2,7 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/labo_12/frontendmentorprofilecardBeginSituatie" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/labo_12/frontendmentorprofilecardBeginSituatie/frontendmentorprofilecardBeginSituatie" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/labo_12/front" vcs="Git" />
   </component>
 </project>
