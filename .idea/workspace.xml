@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2dbabda5-d8ec-4c90-a339-d22e27684ee5" name="Changes" comment="c" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/examen/css/styles.css" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/examen/index.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/index.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_10/beginsituatie_bootstrap5/indexMondriaan.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_11/Beginsituatie/style/style.css" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_11/css/exercise1.css" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_11/css/exercise4.css" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_11/exercise6.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_12/BeginSituatieOef1/BeginSituatieOef1/css/flexbox-cards.css" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_12/BeginSituatieOef2/BeginSituatieOef2/styles/style.css" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_3/Contact/index.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_3/Homepage/Likes/index.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_3/Homepage/index.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_3/Homepage/vrienden/css/stylesheet1.css" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_3/Homepage/vrienden/index.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_3/Opleidingsaanbod/index.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_4/opdracht_2.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_5/opdracht_3.vives.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_5/style.css" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_6/opdracht_3/index.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_6/opdracht_4/css/stylesheet1.css" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_6/opdracht_5/css/stylesheet1.css" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_7/opdracht_3/index.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_7/opdracht_kalender/index.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_8/opdracht_1/index.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_8/opdracht_cocktailbar/css/stylesheet1.css" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_8/testvoorbeelden/index_voor_test2.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_8/testvoorbeelden/index_voor_test3.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_9/opdracht_airbus/index.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/voorbereidingExamen/css/style.css" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/voorbereidingExamen/index.html" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2mpnwzxtx0UJYGkjSUohAJ143T4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html.executor": "Run",
+    "JavaScript Debug.index_labo_2.html.executor": "Run",
+    "JavaScript Debug.opdracht_1.html.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/dries/Documents/GitHub/webdevelopment/labo_sem1",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "web-ide.project.structure",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\voorbereidingExamen\css" />
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_11" />
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_10\homepage\css" />
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_10" />
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_10\opdracht_mondriaan" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\alle vorige labos" />
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\examen\images" />
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_11" />
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_10\homepage\images" />
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\images\labo1-7" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/webdevelopment/labo_sem1/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="opdracht_1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/webdevelopment/labo_3/opdracht_1.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.opdracht_1.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-WS-242.22855.79" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2dbabda5-d8ec-4c90-a339-d22e27684ee5" name="Changes" comment="" />
+      <created>1727782627425</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727782627425</updated>
+      <workItem from="1727782628467" duration="18846000" />
+      <workItem from="1728388347800" duration="20342000" />
+      <workItem from="1729279067419" duration="6266000" />
+      <workItem from="1729786962559" duration="10088000" />
+      <workItem from="1730809759406" duration="34109000" />
+      <workItem from="1732444195182" duration="37796000" />
+      <workItem from="1733393010332" duration="35127000" />
+      <workItem from="1734739593932" duration="3279000" />
+      <workItem from="1736608004477" duration="2872000" />
+      <workItem from="1736869139731" duration="14468000" />
+      <workItem from="1739306650011" duration="193000" />
+      <workItem from="1739308830092" duration="862000" />
+    </task>
+    <task id="LOCAL-00001" summary="c">
+      <option name="closed" value="true" />
+      <created>1734741916914</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1734741916914</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="c" />
+    <option name="LAST_COMMIT_MESSAGE" value="c" />
+  </component>
+</project>
