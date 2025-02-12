@@ -65,40 +65,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "JavaScript Debug.index.html.executor": "Run",
-    "JavaScript Debug.index_labo_2.html.executor": "Run",
-    "JavaScript Debug.opdracht_1.html.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/dries/Documents/GitHub/webdevelopment/labo_sem1",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "web-ide.project.structure",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.index.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.index_labo_2.html.executor&quot;: &quot;Run&quot;,
+    &quot;JavaScript Debug.opdracht_1.html.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dries/Documents/GitHub/webdevelopment/labo_sem1&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;web-ide.project.structure&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_sem1" />
       <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\voorbereidingExamen\css" />
       <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_11" />
       <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_10\homepage\css" />
       <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_10" />
-      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_10\opdracht_mondriaan" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_sem1" />
       <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\alle vorige labos" />
       <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\examen\images" />
       <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_11" />
       <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_10\homepage\images" />
-      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\images\labo1-7" />
     </key>
   </component>
   <component name="RunManager">
@@ -141,7 +141,7 @@
       <workItem from="1736608004477" duration="2872000" />
       <workItem from="1736869139731" duration="14468000" />
       <workItem from="1739306650011" duration="193000" />
-      <workItem from="1739308830092" duration="862000" />
+      <workItem from="1739308830092" duration="1273000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
