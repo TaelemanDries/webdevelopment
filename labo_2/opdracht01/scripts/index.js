@@ -3,7 +3,7 @@ const setup = () => {
 }
 window.addEventListener("load", setup);
 window.alert('goeiendag')
-let antwoordConfirm = window.confirm('Zin in een koekje?')
+let antwoordConfirm = window.confirm('Wordt het morgen zonnig?')
 console.log(antwoordConfirm)
-let antwoordPrompt = window.prompt('wat is uw naam?', 'Onbekend')
+let antwoordPrompt = window.prompt('Wie is mijn grote held?', 'Onbekend')
 console.log(antwoordPrompt)
