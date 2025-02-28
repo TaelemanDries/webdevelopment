@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulier Opdracht</title>
+</head>
+<body>
+
+<form>
+  <fieldset>
+    <legend><strong>Personal Information</strong></legend>
+    <label for="firstName">First name*:</label>
+    <input type="text" id="firstName" name="firstName" placeholder="Your first name" autofocus required>
+    <br><br>
+    <label for="lastName">Last name*:</label>
+    <input type="text" id="lastName" name="lastName" placeholder="Your last name" required>
+  </fieldset>
+
+  <fieldset>
+    <legend><strong>Sports</strong></legend>
+    <p>Which sport do you train?</p>
+    <input type="checkbox" id="running" name="sports" value="Running">
+    <label for="running">Running</label>
+    <input type="checkbox" id="swimming" name="sports" value="Swimming">
+    <label for="swimming">Swimming</label>
+    <input type="checkbox" id="rowing" name="sports" value="Rowing">
+    <label for="rowing">Rowing</label>
+  </fieldset>
+
+  <fieldset>
+    <legend><strong>Gender</strong></legend>
+    <input type="radio" id="male" name="gender" value="Male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female">Female</label>
+    <input type="radio" id="other" name="gender" value="Other">
+    <label for="other">Other / Prefer not to say</label>
+  </fieldset>
+
+  <fieldset>
+    <legend><strong>Favorites</strong></legend>
+    <label for="favMovie">Favorite movie:</label>
+    <input type="text" id="favMovie" name="favMovie">
+    <br><br>
+    <label for="favQuote">Favorite quote:</label>
+    <input type="text" id="favQuote" name="favQuote" placeholder="Write your favorite quote">
+    <br><br>
+    <label>Favorite food:</label>
+    <input type="text" value="Pizza" disabled>
+    <br><br>
+    <label for="favFlavor">Choose a flavor:</label>
+    <select id="favFlavor" name="favFlavor">
+      <option value="hamburger">Hamburger</option>
+      <option value="hotdog">Hot Dog</option>
+    </select>
+  </fieldset>
+
+  <fieldset>
+    <legend><strong>Security & Contact</strong></legend>
+    <label for="password">Password*:</label>
+    <input type="password" id="password" name="password" required>
+    <br><br>
+    <label for="email">Email address*:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+    <br><br>
+    <label for="favSite">Favorite site:</label>
+    <input type="url" id="favSite" name="favSite" placeholder="Enter the URL of your favorite">
+  </fieldset>
+
+  <fieldset>
+    <legend><strong>Additional Information</strong></legend>
+    <label for="favNumber">Favorite number (1-10):</label>
+    <input type="number" id="favNumber" name="favNumber" min="1" max="10">
+    <br><br>
+    <label for="favBigNumber">Favorite number (1-1000):</label>
+    <input type="range" id="favBigNumber" name="favBigNumber" min="1" max="1000">
+    <br><br>
+    <label for="birthdate">When were you born?</label>
+    <input type="date" id="birthdate" name="birthdate">
+    <br><br>
+    <label for="zipcode">Belgian zip-code reg number:</label>
+    <input type="text" id="zipcode" name="zipcode" pattern="[0-9]{4}" title="Enter a 4-digit Belgian zip code">
+  </fieldset>
+
+  <fieldset>
+    <legend><strong>Miscellaneous</strong></legend>
+    <label for="search">Search for something:</label>
+    <input type="search" id="search" name="search">
+    <br><br>
+    <label for="favColor">What is your favorite color?</label>
+    <input type="color" id="favColor" name="favColor">
+    <br><br>
+    <label for="fileUpload">Upload a file:</label>
+    <input type="file" id="fileUpload" name="fileUpload">
+  </fieldset>
+
+  <br>
+  <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
