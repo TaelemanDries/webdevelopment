@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formwaarden</title>
+</head>
+<body>
+<h2>Vul het formulier in</h2>
+
+<form id="mijnForm">
+    <div>
+        <label><input type="checkbox" id="roker"> Is roker</label>
+    </div>
+
+    <div>
+        <label>Moedertaal:</label>
+        <input type="radio" name="moedertaal" value="nl"> Nederlands
+        <input type="radio" name="moedertaal" value="fr"> Frans
+        <input type="radio" name="moedertaal" value="en"> Engels
+    </div>
+
+    <div>
+        <label for="buurland">Favoriete buurland:</label>
+        <select id="buurland">
+            <option value="Nederland">Nederland</option>
+            <option value="Frankrijk">Frankrijk</option>
+            <option value="Duitsland">Duitsland</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="bestelling">Bestelling:</label>
+        <select id="bestelling" multiple>
+            <option value="aardappelen">Aardappelen</option>
+            <option value="brood">Brood</option>
+            <option value="melk">Melk</option>
+            <option value="biefstuk">Biefstuk</option>
+            <option value="chips">Chips</option>
+            <option value="krant">Krant</option>
+        </select>
+    </div>
+
+    <div>
+        <button type="button" id="toonResultaat">Toon resultaat</button>
+    </div>
+</form>
+
+<script src="scripts/index.js"></script>
+</body>
+</html>

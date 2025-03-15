@@ -1,64 +1,75 @@
-/* Algemene stijlen */
+/* Algemene stijl */
 body {
-    background-color: #0d0d0d;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
-/* Glow-effect voor titels */
-h1, h2 {
-    text-transform: uppercase;
-    font-weight: 700;
-    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
-    transition: 0.3s ease-in-out;
+h1 {
+    font-size: 3rem;
+    margin-top: 20px;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
 }
 
-/* Extra hover effect */
-h1:hover, h2:hover {
-    text-shadow: 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc;
+h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
 }
 
-/* Navigatielijst */
 ul {
     list-style: none;
     padding: 0;
 }
 
-/* Lijstitems */
 li {
     margin: 10px 0;
 }
 
-/* Stijl voor links */
+/* Link styling */
 a {
-    font-size: 1.2rem;
-    color: #00ffcc;
     text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    padding: 10px 15px;
-    border: 2px solid #00ffcc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #00ffcc;
+    font-size: 1.2rem;
+    color: #ffcc00;
+    padding: 10px 20px;
+    border-radius: 5px;
     transition: all 0.3s ease-in-out;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
 }
 
-/* Hover-effect voor links */
 a:hover {
-    background-color: #00ffcc;
-    color: #0d0d0d;
-    box-shadow: 0 0 20px #00ffcc;
-    transform: scale(1.1);
+    background-color: #ffcc00;
+    color: #121212;
+    box-shadow: 0 0 10px #ffcc00;
 }
 
-/* Mobiele optimalisatie */
-@media (max-width: 600px) {
-    a {
-        display: block;
-        margin: 10px auto;
-        width: 80%;
-    }
+/* Fancy lijst styling */
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li a {
+    display: block;
+    width: 200px;
+    text-align: center;
+    border: 2px solid #ffcc00;
+}
+
+/* Glow effect for all text */
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #ffffff; }
+    50% { text-shadow: 0 0 20px #ffffff; }
+    100% { text-shadow: 0 0 5px #ffffff; }
+}
+
+h1, h2, a {
+    animation: glow 2s infinite alternate;
 }

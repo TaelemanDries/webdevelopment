@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formvalidatie</title>
+    <style>
+        .error { color: red; font-size: 12px; }
+        .invalid { border: 2px solid red; }
+    </style>
+</head>
+<body>
+<h2>Formulier</h2>
+
+<form id="mijnForm">
+    <div>
+        <label>Voornaam:</label>
+        <input type="text" id="voornaam">
+        <span class="error" id="error-voornaam"></span>
+    </div>
+
+    <div>
+        <label>Familienaam:</label>
+        <input type="text" id="familienaam">
+        <span class="error" id="error-familienaam"></span>
+    </div>
+
+    <div>
+        <label>Geboortedatum:</label>
+        <input type="text" id="geboortedatum">
+        <span class="error" id="error-geboortedatum"></span>
+    </div>
+
+    <div>
+        <label>E-mail:</label>
+        <input type="text" id="email">
+        <span class="error" id="error-email"></span>
+    </div>
+
+    <div>
+        <label>Aantal kinderen:</label>
+        <input type="number" id="kinderen">
+        <span class="error" id="error-kinderen"></span>
+    </div>
+
+    <button type="button" id="valideer">Valideer</button>
+</form>
+
+<script src="scripts/index.js"></script>
+</body>
+</html>
