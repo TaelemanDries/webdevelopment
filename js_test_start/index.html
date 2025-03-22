@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kip en Ei</title>
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div>
+	<label for="kip">Staat van de kip:</label>
+	<select id="kip">
+		<option value="">--KIES--</option>
+		<option value="KipMetEi">Met een ei</option>
+		<option value="KipZonderEi">Zonder een ei</option>
+	</select>
+</div>
+<div>
+	<label>Geef een letter:</label>
+	<input type="text" id="letter" maxlength="1">
+</div>
+<div id="img" class="hidden"></div>
+<p id="note"></p>
+<p id="letter-count"></p>
+<script src="index.js"></script>
+</body>
+</html>
