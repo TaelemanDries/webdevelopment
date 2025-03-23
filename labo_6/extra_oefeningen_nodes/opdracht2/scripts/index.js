@@ -5,7 +5,7 @@ const setup = () => {
         child.classList.add('listitem');
     }
     let img = document.createElement("img");
-    img.setAttribute("src", "images/img.png");
+    img.setAttribute("src", "../../images/img.png");
     let body = document.querySelector("body");
     body.appendChild(img);
 }
