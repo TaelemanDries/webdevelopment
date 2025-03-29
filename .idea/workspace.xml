@@ -13,9 +13,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -36,6 +36,7 @@
     <setting file="file://$PROJECT_DIR$/labo_5/opdracht_gemeenten/index.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/labo_6/extra_oefeningen_nodes/opdracht1/index.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/labo_6/extra_oefeningen_nodes/opdracht3/index.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/labo_7/memorygame/scripts/index.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/sem1/index.html" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProblemsViewState">
@@ -73,11 +74,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_6\extra_oefeningen_nodes\opdracht2" />
       <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_3\opdracht2" />
       <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_sem1" />
       <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\voorbereidingExamen\css" />
       <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_11" />
-      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_10\homepage\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_3\paragraafOpdracht" />
@@ -134,7 +135,7 @@
       <workItem from="1740154939206" duration="15614000" />
       <workItem from="1741768150657" duration="2197000" />
       <workItem from="1742073073363" duration="4756000" />
-      <workItem from="1742661247189" duration="5534000" />
+      <workItem from="1742661247189" duration="12954000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
