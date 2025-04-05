@@ -1,43 +1,104 @@
-let personen = [];
+let personen = [
+    {
+        voornaam: 'Jan',
+        familienaam: 'Janssens',
+        geboorteDatum: '2010-10-10',
+        email: 'jan@example.com',
+        aantalKinderen: 0
+    },
+    {
+        voornaam: 'Mieke',
+        familienaam: 'Mickelsen',
+        geboorteDatum: '1980-01-01',
+        email: 'mieke@example.com',
+        aantalKinderen: 1
+    },
+    {
+        voornaam: 'Piet',
+        familienaam: 'Pieters',
+        geboorteDatum: '1970-12-31',
+        email: 'piet@example.com',
+        aantalKinderen: 2
+    }
+];
 
-// Event listener (btnBewaar click)
-// Bewaar de wijzigingen die in de user interface werden aangebracht
+let geselecteerdeIndex = -1;
+
+const getFormData = () => ({
+    voornaam: document.getElementById("txtVoornaam").value.trim(),
+    familienaam: document.getElementById("txtFamilienaam").value.trim(),
+    geboorteDatum: document.getElementById("txtGeboorteDatum").value.trim(),
+    email: document.getElementById("txtEmail").value.trim(),
+    aantalKinderen: parseInt(document.getElementById("txtAantalKinderen").value.trim())
+});
+
+const vulFormulierIn = (persoon) => {
+    document.getElementById("txtVoornaam").value = persoon.voornaam;
+    document.getElementById("txtFamilienaam").value = persoon.familienaam;
+    document.getElementById("txtGeboorteDatum").value = persoon.geboorteDatum;
+    document.getElementById("txtEmail").value = persoon.email;
+    document.getElementById("txtAantalKinderen").value = persoon.aantalKinderen;
+};
+
+const maakFormulierLeeg = () => {
+    document.getElementById("txtVoornaam").value = "";
+    document.getElementById("txtFamilienaam").value = "";
+    document.getElementById("txtGeboorteDatum").value = "";
+    document.getElementById("txtEmail").value = "";
+    document.getElementById("txtAantalKinderen").value = "";
+    geselecteerdeIndex = -1;
+    clearAllErrors();
+};
+
+const updatePersonenLijst = () => {
+    const lst = document.getElementById("lstPersonen");
+    lst.innerHTML = "";
+    personen.forEach((persoon, index) => {
+        const option = document.createElement("option");
+        option.textContent = `${persoon.voornaam} ${persoon.familienaam}`;
+        option.setAttribute("data-index", index);
+        lst.appendChild(option);
+    });
+};
+
 const bewaarBewerktePersoon = () => {
-    console.log("Klik op de knop bewaar");
-
-    // valideer alle input data en controleer of er geen errors meer zijn
+    clearAllErrors();
     valideer();
 
-    // indien ok, bewaar de ingegeven data.
-        // een nieuw aangemaakte persoon voegen we toe
-        // een bestaande persoon in de lijst passen we aan
-
-    // zorg ervoor dat de naam en voornaam ook aangepast en/of zichtbaar zijn in de lijst na updaten
-};
-
-// Event listener (btnNieuw click)
-const bewerkNieuwePersoon = () => {
-    console.log("Klik op de knop nieuw");
-
-    // Zet de user interface klaar om de gegevens van een nieuwe persoon in te voeren
-};
-
-
-// onze setup functie die de event listeners registreert
-const setup = () => {
-    let btnBewaar = document.getElementById("btnBewaar");
-    btnBewaar.addEventListener("click", bewaarBewerktePersoon);
-
-    let btnNieuw = document.getElementById("btnNieuw");
-    btnNieuw.addEventListener("click", bewerkNieuwePersoon);
-
-    let lstPersonen = document.getElementById("lstPersonen");
-    lstPersonen.addEventListener("click", changelistener);
-    let changelistener = () => {
-
+    const errors = document.querySelectorAll(".errorMessage");
+    for (let error of errors) {
+        if (error.innerText !== "") return;
     }
-    // voeg een change listener toe aan lstPersonen. Bij het klikken op een option element in de lijst
-    // moet de data van die persoon getoond worden in het formulier
+
+    const data = getFormData();
+
+    if (geselecteerdeIndex === -1) {
+        personen.push(data);
+    } else {
+        personen[geselecteerdeIndex] = data;
+    }
+
+    updatePersonenLijst();
+    maakFormulierLeeg();
+};
+
+const bewerkNieuwePersoon = () => {
+    maakFormulierLeeg();
+};
+
+const toonPersoonInFormulier = (e) => {
+    const index = e.target.selectedIndex;
+    if (index >= 0) {
+        geselecteerdeIndex = index;
+        vulFormulierIn(personen[index]);
+    }
+};
+
+const setup = () => {
+    document.getElementById("btnBewaar").addEventListener("click", bewaarBewerktePersoon);
+    document.getElementById("btnNieuw").addEventListener("click", bewerkNieuwePersoon);
+    document.getElementById("lstPersonen").addEventListener("change", toonPersoonInFormulier);
+    updatePersonenLijst();
 };
 
 window.addEventListener("load", setup);
