@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dbabda5-d8ec-4c90-a339-d22e27684ee5" name="Changes" comment="c">
+      <change afterPath="$PROJECT_DIR$/labo_9/opdracht_1/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labo_9/opdracht_1/styles/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labo_8/start contact manager opdracht/start contact manager opdracht/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/labo_8/start contact manager opdracht/start contact manager opdracht/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labo_8/start contact manager opdracht/start contact manager opdracht/scripts/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/labo_8/start contact manager opdracht/start contact manager opdracht/scripts/code.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +18,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -143,7 +144,8 @@
       <workItem from="1741768150657" duration="2197000" />
       <workItem from="1742073073363" duration="4756000" />
       <workItem from="1742661247189" duration="27847000" />
-      <workItem from="1743866937031" duration="348000" />
+      <workItem from="1743866937031" duration="494000" />
+      <workItem from="1745397577329" duration="2208000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
