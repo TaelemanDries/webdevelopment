@@ -27,15 +27,17 @@ const saveSwatch = () => {
 };
 
 const setColorPickerFromSwatch = (event) => {
-    if (event.target.className=="swatch") {
+    if (event.target.className === "swatch") {
         let swatch = event.target;
-        document.getElementById("sldRed").value = rgb.red;
-        document.getElementById("sldGreen").value = rgb.green
-        document.getElementById("sldBlue").value = rgb.blue
+        let rgbStr = window.getComputedStyle(swatch).backgroundColor;
 
+        let rgb = rgbStr.match(/\d+/g);
 
-        // helaas triggeren de .value wijzigingen niet automatisch
-        // een change event ds moeten we handmatig update oproepen
+        document.getElementById("sldRed").value = rgb[0];
+        document.getElementById("sldGreen").value = rgb[1];
+        document.getElementById("sldBlue").value = rgb[2];
+
+        // Handmatige update oproepen
         update();
     }
 };
@@ -45,7 +47,6 @@ const deleteSwatch = (event) => {
     let button = event.target;
     let swatch = button.parentNode;
     swatchComponents.removeChild(swatch);
-
     // bewaar kleurinfo van alle swatches in local storage
     storeSwatches();
 };
