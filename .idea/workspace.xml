@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dbabda5-d8ec-4c90-a339-d22e27684ee5" name="Changes" comment="c">
+      <change afterPath="$PROJECT_DIR$/labo_10/my_internet_page/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labo_10/my_internet_page/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/labo_10/my_internet_page/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labo_9/Start_Colorpicker/Start_Colorpicker/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/labo_9/Start_Colorpicker/Start_Colorpicker/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labo_9/Start_Colorpicker/Start_Colorpicker/scripts/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/labo_9/Start_Colorpicker/Start_Colorpicker/scripts/code.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labo_9/Start_Colorpicker/Start_Colorpicker/scripts/storage.js" beforeDir="false" afterPath="$PROJECT_DIR$/labo_9/Start_Colorpicker/Start_Colorpicker/scripts/storage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labo_9/opdracht_4/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/labo_9/opdracht_4/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labo_9/opdracht_4/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/labo_9/opdracht_4/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labo_7/memorygame/images/VoicemodInstaller_1.4.3-sea1m8.exe" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,9 +20,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -31,6 +30,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/labo_10/my_internet_page/index.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/labo_2/arrayOpdracht/scripts/index.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/labo_2/opdracht04/scripts/index.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/labo_2/opdracht05/scripts/index.js" root0="SKIP_INSPECTION" />
@@ -150,7 +150,8 @@
       <workItem from="1742661247189" duration="27847000" />
       <workItem from="1743866937031" duration="494000" />
       <workItem from="1745397577329" duration="11279000" />
-      <workItem from="1745701992640" duration="1269000" />
+      <workItem from="1745701992640" duration="3276000" />
+      <workItem from="1746297317020" duration="1153000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
