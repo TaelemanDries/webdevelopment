@@ -1,14 +1,16 @@
 #img {
-  background-image: url('without-egg.png');
   width: 200px;
   height: 200px;
 }
 
-#img.with-egg {
-  background-image: url('with-egg.png');
+.with-egg {
+  background-image: url('../with-egg.png');
+}
+.without-egg{
+  background-image: url('../without-egg.png');
 }
 
-#img.hidden {
+.hidden {
   display: none;
 }
 

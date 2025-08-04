@@ -5,12 +5,96 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dbabda5-d8ec-4c90-a339-d22e27684ee5" name="Changes" comment="c">
-      <change afterPath="$PROJECT_DIR$/labo_10/my_internet_page/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labo_10/my_internet_page/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/labo_10/my_internet_page/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/begin/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/begin/scripts/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/begin/styles/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/images/blueruin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/images/dislike.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/images/dragon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/images/edgeoftomorrow.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/images/guardians.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/images/intothestorm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/images/like.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/images/lucy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/images/maleficent.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/images/planes.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/images/planetoftheapes.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/images/transformers.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/screenshots/screenshot1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/screenshots/screenshot2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/script/movies.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/script/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/startsituatie.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/style/all.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/style/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/webfonts/fa-brands-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/webfonts/fa-brands-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/webfonts/fa-brands-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/webfonts/fa-regular-400.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/webfonts/fa-regular-400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/webfonts/fa-regular-400.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/webfonts/fa-solid-900.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/webfonts/fa-solid-900.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/webfonts/fa-solid-900.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra2/scripts/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/extra2/styles/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/ordenMap1/colorPicker/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/ordenMap1/colorPicker/scripts/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/ordenMap1/colorPicker/scripts/storage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/ordenMap1/colorPicker/styles/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/ordenMap1/kopieer/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/ordenMap1/kopieer/scripts/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/ordenMap1/kopieer/styles/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/ordenMap1/opdracht1/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/ordenMap1/opdracht1/scripts/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/ordenMap1/producten/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/ordenMap1/producten/scripts/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/ordenMap1/producten/styles/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/ordenMap1/substring/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/ordenMap1/substring/scripts/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/ordenMap1/substring/styles/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/ordenMap2/manVanAN/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/ordenMap2/manVanAN/scripts/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/ordenMap2/manVanAN/styles/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/ordenMap2/opdrachtFormulier/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/ordenMap2/opdrachtFormulier/scripts/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/examenJS/ordenMap2/opdrachtFormulier/styles/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js_test_start/scripts/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website/images/papaFoto.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website/scripts/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website/styles/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteOptie2/images/detailZwemba.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteOptie2/images/images.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteOptie2/images/papaFoto.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteOptie2/images/stock1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteOptie2/images/zwembad.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteOptie2/images/zwembad2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteOptie2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteOptie2/scripts/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteOptie2/styles/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/labo_7/memorygame/images/VoicemodInstaller_1.4.3-sea1m8.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js_test_start/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/js_test_start/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js_test_start/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js_test_start/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/js_test_start/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labo_10/my_internet_page/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/labo_10/my_internet_page/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labo_2/opdracht01/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/labo_2/opdracht01/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labo_3/colorpickerOpdracht/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/labo_3/colorpickerOpdracht/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labo_3/colorpickerOpdracht/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/labo_3/colorpickerOpdracht/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labo_3/colorpickerOpdracht/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/labo_3/colorpickerOpdracht/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labo_5/opdracht_formwaarden/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/labo_5/opdracht_formwaarden/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/labo_5/opdracht_gemeenten/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/labo_5/opdracht_gemeenten/scripts/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +114,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/examenJS/extra/script/script.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/examenJS/ordenMap1/colorPicker/index.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/examenJS/ordenMap1/colorPicker/scripts/code.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/examenJS/ordenMap1/colorPicker/scripts/storage.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/examenJS/ordenMap1/producten/scripts/code.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/examenJS/ordenMap1/substring/scripts/code.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/labo_10/my_internet_page/index.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/labo_2/arrayOpdracht/scripts/index.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/labo_2/opdracht04/scripts/index.js" root0="SKIP_INSPECTION" />
@@ -71,7 +161,7 @@
     &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/dries/Documents/GitHub/webdevelopment/labo_6/extra_oefeningen_nodes/opdracht2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dries/Documents/GitHub/webdevelopment&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -80,27 +170,27 @@
     &quot;nodejs_interpreter_path&quot;: &quot;C:/Users/dries/AppData/Roaming/JetBrains/WebStorm2024.2/node/versions/22.14.0/node&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_6\extra_oefeningen_nodes\opdracht2" />
-      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_3\opdracht2" />
-      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_sem1" />
-      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\voorbereidingExamen\css" />
-      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_11" />
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\website\images" />
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\examenJS\extra2" />
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\examenJS\extra" />
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\examenJS\ordenMap2" />
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\examenJS" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\js_test_start\styles" />
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\js_test_start\scripts" />
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\examenJS" />
+      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\examenJS\ordenMap1" />
       <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_3\paragraafOpdracht" />
-      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_2\arrayOpdracht" />
-      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_sem1" />
-      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\alle vorige labos" />
-      <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\examen\images" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/webdevelopment/labo_sem1/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -151,7 +241,14 @@
       <workItem from="1743866937031" duration="494000" />
       <workItem from="1745397577329" duration="11279000" />
       <workItem from="1745701992640" duration="3276000" />
-      <workItem from="1746297317020" duration="1153000" />
+      <workItem from="1746297317020" duration="2415000" />
+      <workItem from="1747213710637" duration="7864000" />
+      <workItem from="1748728101797" duration="527000" />
+      <workItem from="1749299393750" duration="14719000" />
+      <workItem from="1749554901658" duration="39565000" />
+      <workItem from="1752249377504" duration="2996000" />
+      <workItem from="1752524335766" duration="8214000" />
+      <workItem from="1752709995363" duration="2150000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />

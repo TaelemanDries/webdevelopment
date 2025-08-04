@@ -5,7 +5,7 @@ const setup = () => {
     while (true) {
         invoer = prompt("Geef een gemeente in of typ 'stop' om te stoppen:");
 
-        if (invoer === null || invoer.toLowerCase() === "stop") {
+        if (invoer === "" || invoer.toLowerCase() === "stop") {
             break;
         }
 

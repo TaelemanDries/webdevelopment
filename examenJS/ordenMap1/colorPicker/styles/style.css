@@ -1,0 +1,28 @@
+.container{
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid lightgray;
+    padding: 10px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#colorCube{
+    background-color: white;
+    border: 1px solid black;
+    width: 70px;
+    height: 70px;
+}
+.opgeslagenKleur{
+    width: 60px;
+    height: 60px;
+    border: 0.5px solid black;
+}
+#opslagKleuren{
+    display: flex;
+    alighn-items: center;
+    justify-content: left;
+    gap: 8px;
+    width: 40%;
+}

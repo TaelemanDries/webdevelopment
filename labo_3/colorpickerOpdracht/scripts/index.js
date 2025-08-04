@@ -28,11 +28,6 @@ const opslaanKleur = () => {
     let colorDemo = document.getElementById("colorBox");
     let opgeslagenKleuren = document.getElementById("opgeslagenKleuren");
 
-    if (!opgeslagenKleuren) {
-        console.error("Het element #opgeslagenKleuren bestaat niet!");
-        return;
-    }
-
     let newColor = document.createElement("div");
     newColor.classList.add("opgeslagenKleur");
     newColor.style.backgroundColor = colorDemo.style.backgroundColor;
@@ -53,14 +48,14 @@ const opslaanKleur = () => {
         update();
     });
 
+    newColor.appendChild(verwijderBtn);
+    opgeslagenKleuren.appendChild(newColor);
+
     // Kleur verwijderen bij klikken op "X"
     verwijderBtn.addEventListener("click", (event) => {
         event.stopPropagation();
         newColor.remove();
     });
-
-    newColor.appendChild(verwijderBtn);
-    opgeslagenKleuren.appendChild(newColor);
 };
 
 window.addEventListener("load", setup);

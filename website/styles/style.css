@@ -1,0 +1,224 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    scroll-behavior: smooth;
+    background: #fefaf6;
+    color: #1c1c1c;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(1, 84, 130, 0.9);
+    color: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 70px;
+    width: auto;
+
+}
+
+.logo {
+    font-family: 'Special Elite', serif;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #ffc107;
+    transition: width 0.3s;
+}
+
+nav a:hover::after, nav a.active::after {
+    width: 100%;
+}
+
+.cta-button {
+    background: #ffc107;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background: #ffae00;
+}
+
+.section {
+    padding: 4rem 2rem;
+}
+
+.light {
+    background: #fefaf6;
+    color: #1c1c1c;
+}
+
+.dark {
+    background: #3e7542;
+    color: white;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.grid img {
+    flex: 1 1 45%;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.grid .text {
+    flex: 1 1 45%;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.hero img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    color: white;
+    text-shadow: 1px 1px 4px #000;
+    text-align: center;
+}
+
+.kamers-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.kamer-card {
+    background: white;
+    color: #1c1c1c;
+    border-radius: 15px;
+    width: 250px;
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.kamer-card:hover {
+    transform: scale(1.05);
+}
+
+.kamer-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    background: #2e5c32;
+    color: white;
+    padding: 1rem;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    background: rgba(1, 84, 130);
+    color: white;
+    padding: 0.6rem;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slideshow */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}

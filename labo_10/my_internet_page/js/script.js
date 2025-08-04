@@ -29,7 +29,7 @@ const setup = () => {
 
     function processCommand() {
         const input = searchInput.value.trim();
-        const [prefix, ...searchTerms] = input.split(" ");
+        const [prefix, searchTerms] = input.split(" ");
         const search = searchTerms.join(" ");
 
         const engine = engineMap[prefix];

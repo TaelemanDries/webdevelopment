@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo Bord</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<h1>ToDo Bord</h1>
+<div class="board">
+    <div class="column" id="todo" ondragover="event.preventDefault()" ondrop="handleDrop(event, 'todo')">
+        <h2>To Do</h2>
+    </div>
+    <div class="column" id="inprogress" ondragover="event.preventDefault()" ondrop="handleDrop(event, 'inprogress')">
+        <h2>In Progress</h2>
+    </div>
+    <div class="column" id="done" ondragover="event.preventDefault()" ondrop="handleDrop(event, 'done')">
+        <h2>Done</h2>
+    </div>
+</div>
+<script src="scripts/code.js"></script>
+</body>
+</html>

@@ -31,8 +31,20 @@ body {
     border: 1px solid black;
 }
 
-#OpslaanKleur {
+.OpslaanKleur {
     height: 30px;
     font-size: 12px;
     padding: 2px 5px;
+    position: relative;
+}
+.opgeslagenKleur {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 1px solid black;
+}
+#opgeslagenKleuren{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
 }

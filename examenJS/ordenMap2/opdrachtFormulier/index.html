@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend><strong>Personal Information</strong></legend>
+        <label>First name*</label>
+        <input type="text" name="first_name" maxlength="30" placeholder="Your first name"/>
+        <br>
+        <label>Last name*</label>
+        <input type="text" name="last_name" maxlength="30" placeholder="Your last name"/>
+    </fieldset>
+    <fieldset>
+        <legend><strong>Sports</strong></legend>
+        <label>which sport do you train?</label>
+        <br>
+        <br>
+        <input type="checkbox" name="sport" value="voetbal"/>voetbal
+        <br>
+        <input type="checkbox" name="sport" value="tennis"/>tennis
+        <br>
+        <input type="checkbox" name="sport" value="kutjebef" checked/>kutjebef
+    </fieldset>
+    <fieldset>
+        <legend><strong>Gender</strong></legend>
+        <br>
+        <input type="radio" name="gender" value="man" checked/>Male
+        <br>
+        <input type="radio" name="gender" value="vrouw"/>Female
+        <br>
+        <input type="radio" name="gender" value="other"/>Confused
+    </fieldset>
+    <fieldset>
+        <legend><strong>Favorites</strong></legend>
+        <label>Favorite movie:</label>
+        <input type="text" name="favoriet_film"/>
+        <br>
+        <label>Favorite movie:</label>
+        <input type="text" name="favoriet_film" placeholder="write your favorite quote"/>
+        <br>
+        <label>Favorite food:</label>
+        <select name="favorite_food" multiple size="3">
+            <option value="ham">hamburger</option>
+            <option value="dog">hot dog</option>
+            <option value="pizza">pizza</option>
+        </select>
+    </fieldset>
+</form>
+<script src="scripts/code.js"></script>
+</body>
+</html>

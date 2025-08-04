@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>colorPicker</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<section class="container">
+<div class="subcontainer">
+<div>
+    <span>0<input class="slider" id="sldRed" type="range" min="0" max="255" value="128"/>255 <span>Red </span><span id="rood">128</span></span>
+</div>
+<div>
+    <span>0<input class="slider" id="sldGreen" type="range" min="0" max="255" value="255"/>255 <span>Green </span><span id="groen">255</span></span>
+</div>
+<div>
+    <span>0<input class="slider" id="sldBlue" type="range" min="0" max="255" value="128"/>255 <span>Blue </span><span id="blauw">128</span></span>
+</div>
+</div>
+    <div id="colorCube"></div>
+    <input type="button" id="butt" value="opslaan"/>
+</section>
+<div id="opslagKleuren"></div>
+<script src="scripts/code.js"></script>
+<script src="scripts/storage.js"></script>
+</body>
+</html>

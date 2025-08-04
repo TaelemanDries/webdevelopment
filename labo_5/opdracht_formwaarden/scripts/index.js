@@ -3,7 +3,7 @@ const setup = () => {
         let roker = document.getElementById("roker").checked;
 
         let moedertaal = document.querySelector('input[name="moedertaal"]:checked');
-        moedertaal = moedertaal ? moedertaal.value : "Geen keuze";
+        moedertaal = moedertaal.value;
 
         let buurland = document.getElementById("buurland").value;
 

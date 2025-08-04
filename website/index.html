@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristal Playa - Vakantie in Spanje</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Special+Elite&family=Pacifico&display=swap" rel="stylesheet">
+    <script src="scripts/code.js" defer></script>
+    <style>
+        .hero-overlay h1 {
+            font-size: 45px;
+        }
+
+        .hero-overlay p {
+            font-size: 35px;
+        }
+    </style>
+</head>
+<body>
+
+<header style="height: 60px;">
+    <div class="logo" style="font-size: 28px;">Cristal Playa</div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#locatie">Locatie</a></li>
+            <li><a href="#appartement">Appartement</a></li>
+            <li><a href="#kamers">Kamers</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" class="cta-button">Boek nu!</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home" class="hero section fade-in">
+    <div class="hero-overlay">
+        <h1 id="hero-title" style="font-family: 'Pacifico', cursive;">Welkom bij Cristal Playa</h1>
+        <p id="hero-subtitle">Geniet van zon, rust en comfort aan de Spaanse kust</p>
+    </div>
+    <img id="hero-image" src="images/zwembad.jpeg" alt="Zwembad zicht" class="hero-image">
+</section>
+
+<section id="locatie" class="section light fade-in">
+    <div class="grid">
+        <div class="text">
+            <h2>Locatie</h2>
+            <p>Gelegen in het zonnige Mar de Cristal, vlakbij de zee en prachtige wandelroutes.</p>
+        </div>
+        <img src="images/papaFoto.jpeg" alt="Locatiebeeld">
+    </div>
+</section>
+
+<section id="appartement" class="section dark fade-in">
+    <div class="grid reverse">
+        <img src="images/appartement.jpg" alt="Appartementbeeld">
+        <div class="text">
+            <h2>Appartement Voorzieningen</h2>
+            <ul>
+                <li>Trapladder & poetsgerief</li>
+                <li>Volledig uitgeruste keuken</li>
+                <li>Airco in alle ruimtes</li>
+                <li>Privé ondergrondse parking met poort</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="kamers" class="section light fade-in">
+    <h2>Onze Kamers</h2>
+    <div class="kamers-container">
+        <div class="kamer-card" onclick="openSlideshow(1)">
+            <img src="images/images.jpg" alt="Slaapkamer 1">
+            <h3>Slaapkamer 1</h3>
+        </div>
+        <div class="kamer-card" onclick="openSlideshow(2)">
+            <img src="images/voeg-hier-kamer2-foto-in.jpg" alt="Slaapkamer 2">
+            <h3>Slaapkamer 2</h3>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section dark fade-in">
+    <h2>Contacteer Ons</h2>
+    <p>📞 <a href="tel:+32488617215">+32 488 61 72 15</a></p>
+    <p>✉️ <a href="mailto:info@example.com">info@example.com</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Cristal Playa | <a href="#">Privacybeleid</a></p>
+</footer>
+
+<a href="#home" class="scroll-top">⬆️</a>
+
+<!-- Simple Slideshow Modal -->
+<div id="slideshow-modal" class="modal">
+    <span class="close" onclick="closeSlideshow()">&times;</span>
+    <img class="modal-content" id="slideshow-img" src="">
+</div>
+
+</body>
+</html>
