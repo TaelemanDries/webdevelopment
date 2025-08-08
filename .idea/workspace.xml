@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dbabda5-d8ec-4c90-a339-d22e27684ee5" name="Changes" comment="c">
-      <change beforePath="$PROJECT_DIR$/labo_7/memorygame/images/DiscordSetup.exe" beforeDir="false" />
-    </list>
+    <list default="true" id="2dbabda5-d8ec-4c90-a339-d22e27684ee5" name="Changes" comment="c" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,7 +159,7 @@
       <workItem from="1752524335766" duration="8214000" />
       <workItem from="1752709995363" duration="2150000" />
       <workItem from="1754310325099" duration="315000" />
-      <workItem from="1754572925761" duration="9775000" />
+      <workItem from="1754572925761" duration="10402000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
