@@ -1,3 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+DiscordSetup.exe filter=lfs diff=lfs merge=lfs -text
 labo_7/memorygame/images/DiscordSetup.exe filter=lfs diff=lfs merge=lfs -text
