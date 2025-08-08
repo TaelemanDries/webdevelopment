@@ -387,6 +387,13 @@ input.error, textarea.error {
     color: white;
     border-radius: 15px;
     border: none;
+    padding: 18px 48px;  /* <-- ZET JE HIER */
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 12px;
+    letter-spacing: 1.1px;
+    box-shadow: 0 4px 16px rgba(20,60,100,0.08);
+    transition: background 0.18s, box-shadow 0.16s;
 }
 .btn:hover {
     background-color: #0a53be;
