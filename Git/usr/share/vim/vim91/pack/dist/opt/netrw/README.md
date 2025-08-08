@@ -394,7 +394,7 @@ General changes made to netrw:
 				  thin and tree modes
 		Dec 30, 2014	* (issue#231) |:ls| was not showing
 				  remote-file buffers reliably.  Fixed.
-	v152:	Apr 08, 2014	* uses the |'noswapfile'| option (requires {{{2
+	v152:	Apr 08, 2014	* uses the |'noswapfile'| option (requires {{{2}}}
 				  vim 7.4 with patch 213)
 				* (Enno Nagel) turn |'rnu'| off in netrw
 				  buffers.
@@ -420,7 +420,7 @@ General changes made to netrw:
 				  chgwin window.
 		May 09, 2014	* SavePosn was "saving filename under cursor"
 				  from a non-netrw window when using :Rex.
-	v151:	Jan 22, 2014	* extended :Rexplore to return to buffer {{{2
+	v151:	Jan 22, 2014	* extended :Rexplore to return to buffer {{{2}}}
 				  prior to Explore or editing a directory
 				* (Ken Takata) netrw gave error when
 				  clipboard was disabled.  Sol'n: Placed
@@ -467,7 +467,7 @@ General changes made to netrw:
 				  and it also handles Window's shares
 				* Fixed |netrw-d| command when applied with ftp
 				* https: support included for netrw#NetRead()
-	v150:	Jul 12, 2013	* removed a "keepalt" to allow ":e #" to {{{2
+	v150:	Jul 12, 2013	* removed a "keepalt" to allow ":e #" to {{{2}}}
 				  return to the netrw directory listing
 		Jul 13, 2013	* (Jonas Diemer) suggested changing
 				  a <cWORD> to <cfile>.
@@ -522,7 +522,7 @@ General changes made to netrw:
 				  style, with a previous window open, that
 				  the wrong directory was being used to open
 				  a file.  Fixed. (P21)
-	v149:	Apr 18, 2013	* in wide listing format, now have maps for {{{2
+	v149:	Apr 18, 2013	* in wide listing format, now have maps for {{{2}}}
 				  w and b to move to next/previous file
 		Apr 26, 2013	* one may now copy files in the same
 				  directory; netrw will issue requests for
@@ -536,7 +536,7 @@ General changes made to netrw:
 				  requested by Paul Domaskis.
 		Jul 03, 2013	* Explore now avoids splitting when a buffer
 				  will be hidden.
-	v148:	Apr 16, 2013	* changed Netrw's Style menu to allow direct {{{2
+	v148:	Apr 16, 2013	* changed Netrw's Style menu to allow direct {{{2}}}
 				  choice of listing style, hiding style, and
 				  sorting style
 ```
