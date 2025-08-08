@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Casa Mariposa</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+    <p>📧 info@casamariposa.com</p>
+</div>
+
+<!-- Header -->
+<header class="main-header">
+    <div class="logo-container">
+        <img src="images/logo-placeholder.png" alt="Logo Casa Mariposa" class="logo" />
+        <h1>Casa Mariposa</h1>
+    </div>
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="omgeving.html">Omgeving</a></li>
+            <li><a href="reserveren.html" class="active">Reserveren</a></li>
+            <li class="dropdown">
+                <a href="#">To do’s </a>
+                <ul class="dropdown-menu">
+                    <li><a href="todos-beachlife.html">Beachlife</a></li>
+                    <li><a href="todos-cultuur.html">Cultuur</a></li>
+                </ul>
+            </li>
+            <li><a href="reisinformatie.html">Reisinformatie</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="info-aanvraag-form">
+    <h2 style="font-size:2.3rem; margin-bottom: 8px; color: #015482; text-align:center;">Info aanvraag</h2>
+    <p style="max-width:600px; margin: 0 auto 32px auto; color:#444; text-align:center;">
+        Vul het formulier in. Wij contacteren je zo snel mogelijk om de reservatie te bevestigen.
+    </p>
+    <form id="infoForm" style="max-width:680px; margin:0 auto; background:#fff; border-radius:14px; box-shadow:0 2px 16px rgba(1,84,130,0.07); padding:34px 8vw 22px 8vw;">
+        <div style="display:flex; gap:18px; flex-wrap:wrap;">
+            <div style="flex:1 1 200px; min-width:180px;">
+                <label for="naam">Naam <span style="color:#e63946">*</span></label>
+                <input type="text" id="naam" name="naam" required>
+            </div>
+            <div style="flex:1 1 200px; min-width:180px;">
+                <label for="telefoon">Telefoonnummer <span style="color:#e63946">*</span></label>
+                <input type="tel" id="telefoon" name="telefoon" required>
+            </div>
+        </div>
+        <div style="display:flex; gap:18px; flex-wrap:wrap; margin-top:18px;">
+            <div style="flex:1 1 200px; min-width:180px;">
+                <label for="email">E-mail <span style="color:#e63946">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div style="flex:1 1 200px; min-width:180px;">
+                <label for="personen">Aantal personen <span style="color:#e63946">*</span></label>
+                <input type="number" id="personen" name="personen" min="1" required>
+            </div>
+        </div>
+        <div style="display:flex; gap:18px; flex-wrap:wrap; margin-top:18px;">
+            <div style="flex:1 1 200px; min-width:180px;">
+                <label for="aankomst">Gewenste datum van aankomst <span style="color:#e63946">*</span></label>
+                <input type="date" id="aankomst" name="aankomst" required>
+            </div>
+            <div style="flex:1 1 200px; min-width:180px;">
+                <label for="vertrek">Gewenste datum van vertrek <span style="color:#e63946">*</span></label>
+                <input type="date" id="vertrek" name="vertrek" required>
+            </div>
+        </div>
+        <div style="margin-top:18px;">
+            <label for="bericht">Bericht <span style="color:#e63946">*</span></label>
+            <textarea id="bericht" name="bericht" rows="4" style="width:100%;" required></textarea>
+        </div>
+        <div style="text-align:center; margin-top:24px;">
+            <button type="submit" class="btn" style="padding:18px 48px;">Aanvraag indienen</button>
+        </div>
+    </form>
+</section>
+
+<section class="contact">
+    <div class="contact-container">
+        <div class="contact-info">
+            <h3>Interesse? Neem contact op.</h3>
+            <p>Stuur een bericht of contacteer ons telefonisch voor meer informatie.</p>
+            <p>
+                <strong>+32 478 88 76 99</strong><br>
+                info@casamariposa.be
+            </p>
+            <div class="socials">
+                <a href="#"><img src="images/icons/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="images/icons/instagram.svg" alt="Instagram"></a>
+                <a href="#"><img src="images/icons/whatsapp.svg" alt="WhatsApp"></a>
+            </div>
+            <a href="reserveren.html" class="btn">Reserveren</a>
+        </div>
+        <div class="contact-image">
+            <img src="images/fam.jpg" alt="Foto van het gezin">
+        </div>
+    </div>
+</section>
+<hr class="divider">
+
+</div>
+<p class="disclaimer">Huisdieren zijn niet toegelaten in het domein en het is ook verboden om te roken in het hele appartement. Op het terras mag er wel gerookt worden.</p>
+
+<script>
+    // Standaarddatum vandaag
+    function setToday(id) {
+        const el = document.getElementById(id);
+        const today = new Date();
+        let mm = String(today.getMonth()+1).padStart(2,'0');
+        let dd = String(today.getDate()).padStart(2,'0');
+        const yyyy = today.getFullYear();
+        el.value = `${yyyy}-${mm}-${dd}`;
+    }
+    setToday("aankomst");
+    setToday("vertrek");
+
+    // Validatie
+    const form = document.getElementById('infoForm');
+    form.addEventListener('submit', function(e) {
+        let error = false;
+        form.querySelectorAll('[required]').forEach(field => {
+            field.classList.remove('error');
+            if (!field.value || (field.type==="email" && !field.value.match(/^[^@]+@[^@]+\.[^@]+$/))) {
+                field.classList.add('error');
+                error = true;
+            }
+            if (field.id==="vertrek" && field.value && form.aankomst.value) {
+                if (form.aankomst.value > form.vertrek.value) {
+                    field.classList.add('error');
+                    error = true;
+                }
+            }
+        });
+        if (error) {
+            e.preventDefault();
+            const firstError = form.querySelector('.error');
+            if (firstError) firstError.scrollIntoView({behavior: "smooth", block: "center"});
+        }
+    });
+</script>
+</body>
+</html>

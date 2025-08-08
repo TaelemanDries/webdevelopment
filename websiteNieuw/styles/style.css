@@ -378,3 +378,17 @@ a {
     display: flex;
     justify-content: center;
 }
+input.error, textarea.error {
+    border-color: #e63946 !important;
+    background: #fff0f0;
+}
+.btn {
+    background-color: #015482;
+    color: white;
+    border-radius: 15px;
+    border: none;
+}
+.btn:hover {
+    background-color: #0a53be;
+    cursor: pointer;
+}
