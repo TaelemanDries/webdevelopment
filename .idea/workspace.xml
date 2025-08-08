@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dbabda5-d8ec-4c90-a339-d22e27684ee5" name="Changes" comment="c">
-      <change afterPath="$PROJECT_DIR$/websiteNieuw/images/detailZwemba.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteNieuw/images/images.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteNieuw/images/papaFoto.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteNieuw/images/stock1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteNieuw/images/zwembad.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteNieuw/images/zwembad2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteNieuw/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteNieuw/omgeving.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteNieuw/scripts/code.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/websiteNieuw/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +161,7 @@
       <workItem from="1752524335766" duration="8214000" />
       <workItem from="1752709995363" duration="2150000" />
       <workItem from="1754310325099" duration="315000" />
-      <workItem from="1754572925761" duration="8813000" />
+      <workItem from="1754572925761" duration="9297000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
