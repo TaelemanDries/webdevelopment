@@ -360,6 +360,19 @@
                 start,
                 end
             };
+            const subject = encodeURIComponent(`Nieuwe reserveringsaanvraag van ${payload.naam}`);
+            const body = encodeURIComponent(
+                `Naam: ${payload.naam}
+Telefoon: ${payload.telefoon}
+E-mail: ${payload.email}
+Aantal personen: ${payload.personen}
+Aankomst: ${payload.start}
+Vertrek: ${payload.end}
+
+Bericht:
+${payload.bericht}`
+            );
+            window.location.href = `mailto:evalaus@hotmail.com?subject=${subject}&body=${body}`;
 
             try {
                 const res = await fetch(`${WORKER_BASE}/request`, {
@@ -376,6 +389,7 @@
             }
         });
     }
+
 </script>
 </body>
 </html>
