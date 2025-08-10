@@ -17,6 +17,21 @@
     <!-- FullCalendar (grote kalender bovenaan) -->
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+
+    <!-- Donkergrijs voor dagen vóór vandaag -->
+    <style>
+        /* FullCalendar: verleden donkergrijs */
+        .past-disabled {
+            background: #eceff3 !important;
+            color: #6b7280 !important;
+        }
+        /* Flatpickr: verleden donkergrijs */
+        .fp-past {
+            background: #eceff3 !important;
+            color: #6b7280 !important;
+        }
+        .fp-past:hover { cursor: not-allowed; }
+    </style>
 </head>
 <body>
 
@@ -134,38 +149,35 @@
     const WORKER_BASE = "https://casamariposa.driestaeleman47.workers.dev";
     const CAL_RANGE_MONTHS = 12;
 
-    // helpers
+    // ===== HELPERS =====
     const toISO = d => new Date(d.getTime() - d.getTimezoneOffset()*60000).toISOString().slice(0,10);
     const qs = sel => document.querySelector(sel);
 
+    const todayLocal = new Date();
+    todayLocal.setHours(0,0,0,0);
+    const TODAY_STR = toISO(todayLocal);
+
+    // Start
     document.addEventListener('DOMContentLoaded', init);
 
     async function init() {
         const today = new Date();
         const to = new Date(today); to.setMonth(to.getMonth() + CAL_RANGE_MONTHS);
 
-        // 1) Busy ranges ophalen van de Worker
-        const busyRanges = await getBusyRanges(toISO(today), toISO(to)); // [{start,end(excl)}]
-
-        // 2) Grote kalender tonen
+        const busyRanges = await getBusyRanges(toISO(today), toISO(to)); // [{start, end(excl)}]
         renderBigCalendar(busyRanges);
 
-        // 3) Set met alle bezette datums (dag-per-dag) voor Flatpickr
         const busyDates = expandToDates(busyRanges); // Set('YYYY-MM-DD')
-
-        // 4) Flatpickr op de twee velden + onderlinge koppeling
         setupFlatpickrs(busyDates);
-
-        // 5) Form submit → aanvraag naar Worker
         setupSubmit();
     }
 
     async function getBusyRanges(from, to) {
         const url = `${WORKER_BASE}/busy?from=${from}&to=${to}`;
         const res = await fetch(url, { cache: "no-store" });
-        const data = await res.json(); // {busy:[{from,to}]}
+        const data = await res.json(); // { busy: [ {from, to} ] }
         const list = data.busy || [];
-        // Worker geeft 'to' inclusief terug; FullCalendar wil end exclusief → +1 dag
+        // 'to' is inclusief → voor FullCalendar end exclusief maken (+1 dag)
         return list.map(r => {
             const end = new Date(r.to); end.setDate(end.getDate() + 1);
             return { start: r.from, end: toISO(end) };
@@ -175,7 +187,6 @@
     function renderBigCalendar(busyRanges) {
         const calendarEl = document.getElementById('bigCalendar');
 
-        // events als "background" blokken
         const busyEvents = busyRanges.map(r => ({
             title: "Bezet",
             start: r.start,
@@ -194,28 +205,47 @@
             headerToolbar: { left: 'prev,next today', center: 'title', right: '' },
             dayMaxEventRows: true,
             events: busyEvents,
-            dayCellDidMount(info) {
-                const dateStr = info.dateStr;
+
+            // ✅ voeg class toe met ingebouwde vlag
+            dayCellClassNames(arg) {
+                return arg.isPast ? ['past-disabled'] : [];
+            },
+
+            dayCellDidMount(arg) {
+                const dateStr = toISO(arg.date);
                 const isBusy = busyRanges.some(r => dateStr >= r.start && dateStr < r.end);
+
                 // tooltip
-                info.el.style.position = 'relative';
+                arg.el.style.position = 'relative';
                 const tip = document.createElement('div');
-                tip.textContent = isBusy ? "Deze datum is al bezet" : "Deze datum is nog vrij";
+                tip.textContent = arg.isPast
+                    ? "Deze datum is onbeschikbaar"
+                    : (isBusy ? "Deze datum is al bezet" : "Deze datum is nog vrij");
                 tip.className = 'day-tooltip';
                 tip.style.cssText = `
-          position:absolute; left:50%; bottom:110%;
-          transform:translateX(-50%); background:#111; color:#fff; font-size:12px;
-          padding:6px 8px; border-radius:6px; white-space:nowrap; pointer-events:none;
-          opacity:0; transition:opacity .15s; z-index:5;
-        `;
-                info.el.appendChild(tip);
-                info.el.addEventListener('mouseenter', ()=> tip.style.opacity = '1');
-                info.el.addEventListener('mouseleave', ()=> tip.style.opacity = '0');
+        position:absolute; left:50%; bottom:110%;
+        transform:translateX(-50%); background:#111; color:#fff; font-size:12px;
+        padding:6px 8px; border-radius:6px; white-space:nowrap; pointer-events:none;
+        opacity:0; transition:opacity .15s; z-index:5;`;
+                arg.el.appendChild(tip);
+                arg.el.addEventListener('mouseenter', ()=> tip.style.opacity = '1');
+                arg.el.addEventListener('mouseleave', ()=> tip.style.opacity = '0');
 
-                // klik op vrije dag → vul aankomst
+                // ✅ forceer background op alle relevante lagen (voor thema's die overschrijven)
+                if (arg.isPast) {
+                    arg.el.style.background = '#eceff3';
+                    const frame = arg.el.querySelector('.fc-daygrid-day-frame');
+                    if (frame) frame.style.background = '#eceff3';
+                    const bg = arg.el.querySelector('.fc-daygrid-day-bg');
+                    if (bg) bg.style.background = '#eceff3';
+                    arg.el.style.cursor = 'not-allowed';
+                    return;
+                }
+
+                // Klik op vrije dag → vul aankomst
                 if (!isBusy) {
-                    info.el.style.cursor = 'pointer';
-                    info.el.addEventListener('click', () => {
+                    arg.el.style.cursor = 'pointer';
+                    arg.el.addEventListener('click', () => {
                         const aankomst = qs('#aankomst');
                         if (aankomst && window.flatpickr && aankomst._flatpickr) {
                             aankomst._flatpickr.setDate(dateStr, true);
@@ -233,7 +263,6 @@
     }
 
     function expandToDates(busyRanges) {
-        // maak Set met elke bezette dag YYYY-MM-DD
         const s = new Set();
         busyRanges.forEach(r => {
             const start = new Date(r.start);
@@ -247,18 +276,19 @@
 
     function setupFlatpickrs(busyDates) {
         const isBusy = (date) => busyDates.has(toISO(date));
-
         const aankomstEl = qs('#aankomst');
         const vertrekEl  = qs('#vertrek');
 
-        // Aankomst
         const fpA = flatpickr(aankomstEl, {
             dateFormat: "Y-m-d",
             minDate: "today",
             disable: [ (date) => isBusy(date) ],
             onDayCreate: (_dObj, _dStr, fp, dayElem) => {
                 const ds = toISO(dayElem.dateObj);
-                if (busyDates.has(ds)) {
+                if (ds < TODAY_STR) {
+                    dayElem.classList.add('fp-past');
+                    dayElem.title = 'Deze datum is onbeschikbaar';
+                } else if (busyDates.has(ds)) {
                     dayElem.classList.add('fp-busy');
                     dayElem.title = 'Deze datum is al bezet';
                 } else {
@@ -268,14 +298,9 @@
             onChange: (selectedDates) => {
                 const start = selectedDates[0];
                 if (!start) return;
-
-                // vertrek moet > start en ook niet op bezette dag
                 const minV = new Date(start); minV.setDate(minV.getDate() + 1);
-
-                // zoek eerstvolgende vrije dag ≥ minV
                 let cand = new Date(minV);
                 while (isBusy(cand)) cand.setDate(cand.getDate() + 1);
-
                 fpV.set('minDate', toISO(minV));
                 if (!fpV.selectedDates?.length || fpV.selectedDates[0] <= start) {
                     fpV.setDate(toISO(cand), true);
@@ -283,13 +308,11 @@
             }
         });
 
-        // Vertrek
         const fpV = flatpickr(vertrekEl, {
             dateFormat: "Y-m-d",
             minDate: "today",
             disable: [
                 (date) => {
-                    // vertrek mag niet op of vóór aankomst en niet bezet
                     const aDate = fpA.selectedDates?.[0];
                     if (aDate && date <= aDate) return true;
                     return isBusy(date);
@@ -305,8 +328,8 @@
             onDayCreate: (_dObj, _dStr, fp, dayElem) => {
                 const ds = toISO(dayElem.dateObj);
                 const aDate = fpA.selectedDates?.[0];
-                if ((aDate && dayElem.dateObj <= aDate) || busyDates.has(ds)) {
-                    dayElem.classList.add('fp-busy');
+                if (ds < TODAY_STR || (aDate && dayElem.dateObj <= aDate) || busyDates.has(ds)) {
+                    dayElem.classList.add('fp-past');
                     dayElem.title = 'Niet beschikbaar';
                 } else {
                     dayElem.title = 'Beschikbaar';
@@ -321,7 +344,6 @@
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            // simpele validatie
             const start = form.aankomst.value;
             const end   = form.vertrek.value;
             if (!start || !end || end <= start) {

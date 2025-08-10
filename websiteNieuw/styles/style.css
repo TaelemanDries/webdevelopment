@@ -445,3 +445,22 @@ input.error, textarea.error {
     box-shadow: 0 0 0 3px rgba(1,84,130,.15);
     outline: none;
 }
+/* FullCalendar: verleden donkergrijs (dek álle lagen af) */
+.fc .fc-daygrid-day.past-disabled,
+.fc .fc-daygrid-day.past-disabled .fc-daygrid-day-bg,
+.fc .fc-daygrid-day.past-disabled .fc-daygrid-day-frame {
+    background: #eceff3 !important;
+}
+
+.fc .fc-daygrid-day.past-disabled .fc-daygrid-day-number,
+.fc .fc-daygrid-day.past-disabled .fc-daygrid-day-top {
+    color: #6b7280 !important;
+}
+
+.fc .fc-daygrid-day.past-disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
+
