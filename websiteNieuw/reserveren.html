@@ -4,8 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Casa Mariposa</title>
+
+    <!-- JOUW STYLES -->
     <link rel="stylesheet" href="styles/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Flatpickr (mooie datepicker) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/material_blue.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- FullCalendar (grote kalender bovenaan) -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
 </head>
 <body>
 
@@ -37,11 +48,20 @@
     </nav>
 </header>
 
+<!-- Grote kalender -->
+<section id="availability" class="availability">
+    <h2 style="font-size:2.3rem; margin: 10px 0 18px; color:#015482; text-align:center;">Beschikbaarheid</h2>
+    <div id="bigCalendar" style="max-width:1100px;margin:0 auto; background:#fff; border-radius:14px; box-shadow:0 6px 24px rgba(1,84,130,.08); padding:16px;"></div>
+    <p style="text-align:center; color:#667; margin-top:10px; font-size:.95rem;">Rood = bezet • Overige dagen = vrij</p>
+</section>
+
+<!-- Formulier -->
 <section class="info-aanvraag-form">
     <h2 style="font-size:2.3rem; margin-bottom: 8px; color: #015482; text-align:center;">Info aanvraag</h2>
     <p style="max-width:600px; margin: 0 auto 32px auto; color:#444; text-align:center;">
         Vul het formulier in. Wij contacteren je zo snel mogelijk om de reservatie te bevestigen.
     </p>
+
     <form id="infoForm" style="max-width:680px; margin:0 auto; background:#fff; border-radius:14px; box-shadow:0 2px 16px rgba(1,84,130,0.07); padding:34px 8vw 22px 8vw;">
         <div style="display:flex; gap:18px; flex-wrap:wrap;">
             <div style="flex:1 1 200px; min-width:180px;">
@@ -53,6 +73,7 @@
                 <input type="tel" id="telefoon" name="telefoon" required>
             </div>
         </div>
+
         <div style="display:flex; gap:18px; flex-wrap:wrap; margin-top:18px;">
             <div style="flex:1 1 200px; min-width:180px;">
                 <label for="email">E-mail <span style="color:#e63946">*</span></label>
@@ -63,20 +84,23 @@
                 <input type="number" id="personen" name="personen" min="1" required>
             </div>
         </div>
+
         <div style="display:flex; gap:18px; flex-wrap:wrap; margin-top:18px;">
             <div style="flex:1 1 200px; min-width:180px;">
                 <label for="aankomst">Gewenste datum van aankomst <span style="color:#e63946">*</span></label>
-                <input type="date" id="aankomst" name="aankomst" required>
+                <input type="text" id="aankomst" name="aankomst" placeholder="Kies aankomstdatum" required>
             </div>
             <div style="flex:1 1 200px; min-width:180px;">
                 <label for="vertrek">Gewenste datum van vertrek <span style="color:#e63946">*</span></label>
-                <input type="date" id="vertrek" name="vertrek" required>
+                <input type="text" id="vertrek" name="vertrek" placeholder="Kies vertrekdatum" required>
             </div>
         </div>
+
         <div style="margin-top:18px;">
             <label for="bericht">Bericht <span style="color:#e63946">*</span></label>
             <textarea id="bericht" name="bericht" rows="4" style="width:100%;" required></textarea>
         </div>
+
         <div style="text-align:center; margin-top:24px;">
             <button type="submit" class="btn">Aanvraag indienen</button>
         </div>
@@ -88,10 +112,7 @@
         <div class="contact-info">
             <h3>Interesse? Neem contact op.</h3>
             <p>Stuur een bericht of contacteer ons telefonisch voor meer informatie.</p>
-            <p>
-                <strong>+32 478 88 76 99</strong><br>
-                info@casamariposa.be
-            </p>
+            <p><strong>+32 478 88 76 99</strong><br>info@casamariposa.be</p>
             <div class="socials">
                 <a href="#"><img src="images/icons/facebook.svg" alt="Facebook"></a>
                 <a href="#"><img src="images/icons/instagram.svg" alt="Instagram"></a>
@@ -105,46 +126,234 @@
     </div>
 </section>
 <hr class="divider">
-
-</div>
 <p class="disclaimer">Huisdieren zijn niet toegelaten in het domein en het is ook verboden om te roken in het hele appartement. Op het terras mag er wel gerookt worden.</p>
 
+<!-- ÉÉN scriptblok dat alles regelt -->
 <script>
-    // Standaarddatum vandaag
-    function setToday(id) {
-        const el = document.getElementById(id);
-        const today = new Date();
-        let mm = String(today.getMonth()+1).padStart(2,'0');
-        let dd = String(today.getDate()).padStart(2,'0');
-        const yyyy = today.getFullYear();
-        el.value = `${yyyy}-${mm}-${dd}`;
-    }
-    setToday("aankomst");
-    setToday("vertrek");
+    // ===== CONFIG =====
+    const WORKER_BASE = "https://casamariposa.driestaeleman47.workers.dev";
+    const CAL_RANGE_MONTHS = 12;
 
-    // Validatie
-    const form = document.getElementById('infoForm');
-    form.addEventListener('submit', function(e) {
-        let error = false;
-        form.querySelectorAll('[required]').forEach(field => {
-            field.classList.remove('error');
-            if (!field.value || (field.type==="email" && !field.value.match(/^[^@]+@[^@]+\.[^@]+$/))) {
-                field.classList.add('error');
-                error = true;
-            }
-            if (field.id==="vertrek" && field.value && form.aankomst.value) {
-                if (form.aankomst.value > form.vertrek.value) {
-                    field.classList.add('error');
-                    error = true;
+    // helpers
+    const toISO = d => new Date(d.getTime() - d.getTimezoneOffset()*60000).toISOString().slice(0,10);
+    const qs = sel => document.querySelector(sel);
+
+    document.addEventListener('DOMContentLoaded', init);
+
+    async function init() {
+        const today = new Date();
+        const to = new Date(today); to.setMonth(to.getMonth() + CAL_RANGE_MONTHS);
+
+        // 1) Busy ranges ophalen van de Worker
+        const busyRanges = await getBusyRanges(toISO(today), toISO(to)); // [{start,end(excl)}]
+
+        // 2) Grote kalender tonen
+        renderBigCalendar(busyRanges);
+
+        // 3) Set met alle bezette datums (dag-per-dag) voor Flatpickr
+        const busyDates = expandToDates(busyRanges); // Set('YYYY-MM-DD')
+
+        // 4) Flatpickr op de twee velden + onderlinge koppeling
+        setupFlatpickrs(busyDates);
+
+        // 5) Form submit → aanvraag naar Worker
+        setupSubmit();
+    }
+
+    async function getBusyRanges(from, to) {
+        const url = `${WORKER_BASE}/busy?from=${from}&to=${to}`;
+        const res = await fetch(url, { cache: "no-store" });
+        const data = await res.json(); // {busy:[{from,to}]}
+        const list = data.busy || [];
+        // Worker geeft 'to' inclusief terug; FullCalendar wil end exclusief → +1 dag
+        return list.map(r => {
+            const end = new Date(r.to); end.setDate(end.getDate() + 1);
+            return { start: r.from, end: toISO(end) };
+        });
+    }
+
+    function renderBigCalendar(busyRanges) {
+        const calendarEl = document.getElementById('bigCalendar');
+
+        // events als "background" blokken
+        const busyEvents = busyRanges.map(r => ({
+            title: "Bezet",
+            start: r.start,
+            end:   r.end, // exclusief
+            display: "background",
+            color: "#e63946",
+            textColor: "#e63946",
+            extendedProps: { tooltip: "Deze datum is al bezet" }
+        }));
+
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            height: 'auto',
+            fixedWeekCount: false,
+            showNonCurrentDates: false,
+            headerToolbar: { left: 'prev,next today', center: 'title', right: '' },
+            dayMaxEventRows: true,
+            events: busyEvents,
+            dayCellDidMount(info) {
+                const dateStr = info.dateStr;
+                const isBusy = busyRanges.some(r => dateStr >= r.start && dateStr < r.end);
+                // tooltip
+                info.el.style.position = 'relative';
+                const tip = document.createElement('div');
+                tip.textContent = isBusy ? "Deze datum is al bezet" : "Deze datum is nog vrij";
+                tip.className = 'day-tooltip';
+                tip.style.cssText = `
+          position:absolute; left:50%; bottom:110%;
+          transform:translateX(-50%); background:#111; color:#fff; font-size:12px;
+          padding:6px 8px; border-radius:6px; white-space:nowrap; pointer-events:none;
+          opacity:0; transition:opacity .15s; z-index:5;
+        `;
+                info.el.appendChild(tip);
+                info.el.addEventListener('mouseenter', ()=> tip.style.opacity = '1');
+                info.el.addEventListener('mouseleave', ()=> tip.style.opacity = '0');
+
+                // klik op vrije dag → vul aankomst
+                if (!isBusy) {
+                    info.el.style.cursor = 'pointer';
+                    info.el.addEventListener('click', () => {
+                        const aankomst = qs('#aankomst');
+                        if (aankomst && window.flatpickr && aankomst._flatpickr) {
+                            aankomst._flatpickr.setDate(dateStr, true);
+                            aankomst.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        } else if (aankomst) {
+                            aankomst.value = dateStr;
+                            aankomst.dispatchEvent(new Event('change'));
+                        }
+                    });
                 }
             }
         });
-        if (error) {
+
+        calendar.render();
+    }
+
+    function expandToDates(busyRanges) {
+        // maak Set met elke bezette dag YYYY-MM-DD
+        const s = new Set();
+        busyRanges.forEach(r => {
+            const start = new Date(r.start);
+            const end = new Date(r.end); // exclusief
+            for (let d = new Date(start); d < end; d.setDate(d.getDate() + 1)) {
+                s.add(toISO(d));
+            }
+        });
+        return s;
+    }
+
+    function setupFlatpickrs(busyDates) {
+        const isBusy = (date) => busyDates.has(toISO(date));
+
+        const aankomstEl = qs('#aankomst');
+        const vertrekEl  = qs('#vertrek');
+
+        // Aankomst
+        const fpA = flatpickr(aankomstEl, {
+            dateFormat: "Y-m-d",
+            minDate: "today",
+            disable: [ (date) => isBusy(date) ],
+            onDayCreate: (_dObj, _dStr, fp, dayElem) => {
+                const ds = toISO(dayElem.dateObj);
+                if (busyDates.has(ds)) {
+                    dayElem.classList.add('fp-busy');
+                    dayElem.title = 'Deze datum is al bezet';
+                } else {
+                    dayElem.title = 'Deze datum is nog vrij';
+                }
+            },
+            onChange: (selectedDates) => {
+                const start = selectedDates[0];
+                if (!start) return;
+
+                // vertrek moet > start en ook niet op bezette dag
+                const minV = new Date(start); minV.setDate(minV.getDate() + 1);
+
+                // zoek eerstvolgende vrije dag ≥ minV
+                let cand = new Date(minV);
+                while (isBusy(cand)) cand.setDate(cand.getDate() + 1);
+
+                fpV.set('minDate', toISO(minV));
+                if (!fpV.selectedDates?.length || fpV.selectedDates[0] <= start) {
+                    fpV.setDate(toISO(cand), true);
+                }
+            }
+        });
+
+        // Vertrek
+        const fpV = flatpickr(vertrekEl, {
+            dateFormat: "Y-m-d",
+            minDate: "today",
+            disable: [
+                (date) => {
+                    // vertrek mag niet op of vóór aankomst en niet bezet
+                    const aDate = fpA.selectedDates?.[0];
+                    if (aDate && date <= aDate) return true;
+                    return isBusy(date);
+                }
+            ],
+            onOpen: () => {
+                const aDate = fpA.selectedDates?.[0];
+                if (aDate) {
+                    const minV = new Date(aDate); minV.setDate(minV.getDate() + 1);
+                    fpV.set('minDate', toISO(minV));
+                }
+            },
+            onDayCreate: (_dObj, _dStr, fp, dayElem) => {
+                const ds = toISO(dayElem.dateObj);
+                const aDate = fpA.selectedDates?.[0];
+                if ((aDate && dayElem.dateObj <= aDate) || busyDates.has(ds)) {
+                    dayElem.classList.add('fp-busy');
+                    dayElem.title = 'Niet beschikbaar';
+                } else {
+                    dayElem.title = 'Beschikbaar';
+                }
+            }
+        });
+    }
+
+    function setupSubmit() {
+        const form = document.getElementById('infoForm');
+
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const firstError = form.querySelector('.error');
-            if (firstError) firstError.scrollIntoView({behavior: "smooth", block: "center"});
-        }
-    });
+
+            // simpele validatie
+            const start = form.aankomst.value;
+            const end   = form.vertrek.value;
+            if (!start || !end || end <= start) {
+                alert("Controleer de datums (vertrek moet na aankomst liggen).");
+                return;
+            }
+
+            const payload = {
+                naam: form.naam.value.trim(),
+                email: form.email.value.trim(),
+                telefoon: form.telefoon.value.trim(),
+                personen: form.personen.value,
+                bericht: form.bericht.value.trim(),
+                start,
+                end
+            };
+
+            try {
+                const res = await fetch(`${WORKER_BASE}/request`, {
+                    method: 'POST',
+                    headers: { 'Content-Type':'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                if (!res.ok) throw new Error(await res.text());
+                alert("Aanvraag verstuurd! Je ontvangt snel een bevestiging.");
+                form.reset();
+            } catch (err) {
+                console.error(err);
+                alert("Kon de aanvraag niet opslaan. Probeer later opnieuw.");
+            }
+        });
+    }
 </script>
 </body>
 </html>
