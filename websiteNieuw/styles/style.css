@@ -27,20 +27,31 @@ a {
 }
 
 .logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    position: relative;
 }
 
-.logo {
-    width: 40px;
-    height: 40px;
+.logo-container img.logo {
+    height: 80px; /* normale hoogte in de header */
+    width: auto;
+    position: relative;
+    z-index: 1;
+}
+.logo-container.big-logo img.logo {
+    height: 120px; /* of 140px */
+    position: absolute;
+    top: -20px; /* laat 'm boven de header uitsteken */
+    left: 0;
+}
+.logo{
+    height: auto;
+    width: auto;
 }
 
 .main-header h1 {
     margin: 0;
     font-size: 1.8rem;
     color: #015482;
+    padding-left: 133px;
 }
 
 .nav-menu {
