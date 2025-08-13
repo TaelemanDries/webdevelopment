@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dbabda5-d8ec-4c90-a339-d22e27684ee5" name="Changes" comment="c">
-      <change beforePath="$PROJECT_DIR$/sem1/labo_9/opdracht_airbus/images/~BROMIUM/badge1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/websiteNieuw/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteNieuw/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/websiteNieuw/omgeving.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteNieuw/omgeving.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/websiteNieuw/reisinformatie.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteNieuw/reisinformatie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/websiteNieuw/reserveren.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteNieuw/reserveren.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +108,7 @@
       <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_3\paragraafOpdracht" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
+  <component name="RunManager">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/webdevelopment/labo_sem1/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -166,7 +170,7 @@
       <workItem from="1754310325099" duration="315000" />
       <workItem from="1754572925761" duration="25565000" />
       <workItem from="1754955065876" duration="5793000" />
-      <workItem from="1755116125775" duration="550000" />
+      <workItem from="1755116125775" duration="2939000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
