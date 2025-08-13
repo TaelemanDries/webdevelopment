@@ -332,7 +332,7 @@ a {
 }
 
 .contact-image {
-    flex: 1 1 410px;
+    flex: 1 1 210px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -340,7 +340,7 @@ a {
     max-width: 510px;
 }
 .contact-image img {
-    width: 100%;
+    width: 70%;
     min-height: 200px;
     max-height: 370px;
     object-fit: cover;
@@ -471,6 +471,18 @@ input.error, textarea.error {
 .fc .fc-daygrid-day.past-disabled {
     cursor: not-allowed;
     pointer-events: none;
+}
+#facebook{
+    height: 40px;
+    width: auto;
+}
+#instagram{
+    height: 40px;
+    width: auto;
+}
+#whatsapp{
+    height: 40px;
+    width: auto;
 }
 
 

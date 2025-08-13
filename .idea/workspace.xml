@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2dbabda5-d8ec-4c90-a339-d22e27684ee5" name="Changes" comment="c">
+      <change afterPath="$PROJECT_DIR$/herexamen/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/herexamen/scripts/code.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/websiteNieuw/reisinformatie.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/websiteNieuw/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteNieuw/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/websiteNieuw/omgeving.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteNieuw/omgeving.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/websiteNieuw/reserveren.html" beforeDir="false" afterPath="$PROJECT_DIR$/websiteNieuw/reserveren.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/websiteNieuw/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/websiteNieuw/styles/style.css" afterDir="false" />
@@ -19,8 +23,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -34,6 +38,7 @@
     <setting file="file://$PROJECT_DIR$/examenJS/ordenMap1/colorPicker/scripts/storage.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/examenJS/ordenMap1/producten/scripts/code.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/examenJS/ordenMap1/substring/scripts/code.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/herexamen/index.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/labo_10/my_internet_page/index.html" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/labo_2/arrayOpdracht/scripts/index.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/labo_2/opdracht04/scripts/index.js" root0="SKIP_INSPECTION" />
@@ -54,6 +59,7 @@
     <setting file="file://$PROJECT_DIR$/labo_8/verjaardagsOpdracht/scripts/index.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/labo_9/Start_Colorpicker/Start_Colorpicker/scripts/code.js" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/sem1/index.html" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/websiteNieuw/index.html" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -105,7 +111,7 @@
       <recent name="C:\Users\dries\Documents\GitHub\webdevelopment\labo_3\paragraafOpdracht" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
+  <component name="RunManager">
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/webdevelopment/labo_sem1/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -166,7 +172,7 @@
       <workItem from="1752709995363" duration="2150000" />
       <workItem from="1754310325099" duration="315000" />
       <workItem from="1754572925761" duration="25565000" />
-      <workItem from="1754955065876" duration="300000" />
+      <workItem from="1754955065876" duration="5793000" />
     </task>
     <task id="LOCAL-00001" summary="c">
       <option name="closed" value="true" />
