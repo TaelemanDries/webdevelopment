@@ -484,6 +484,160 @@ input.error, textarea.error {
     height: 40px;
     width: auto;
 }
+/* =========================
+   RESPONSIVE TWEAKS (add at end)
+   ========================= */
+
+/* Tablet en kleiner */
+@media (max-width: 1024px) {
+    .main-header {
+        padding: 14px 18px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .main-header h1 {
+        font-size: 1.6rem;
+        padding-left: 0;           /* geen vaste offset op small */
+    }
+    .logo-container img.logo {
+        height: 64px;
+    }
+    /* Als je de 'big-logo' class gebruikt, maak hem mobiel bescheiden */
+    .logo-container.big-logo img.logo {
+        position: static;
+        height: 72px;
+    }
+
+    /* Nav onder de titel, gewrapt en gecentreerd */
+    .nav-menu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    /* Hero compacter */
+    .hero { height: 56vh; }
+    .hero-overlay {
+        padding: 22px 26px;
+        max-width: 92%;
+    }
+    .hero-title { font-size: 2.2rem; }
+    .hero-welcome { font-size: 1rem; }
+}
+
+/* Telefoon breedte */
+@media (max-width: 700px) {
+    .topbar { font-size: .85rem; padding: 8px 10px; }
+
+    .main-header {
+        padding: 12px 14px;
+        gap: 6px;
+    }
+    .logo-container img.logo { height: 56px; }
+    .main-header h1 {
+        font-size: 1.35rem;
+        line-height: 1.1;
+    }
+
+    /* Menu in meerdere rijen met grotere klikdoelen */
+    .nav-menu {
+        gap: 10px 14px;
+    }
+    .nav-menu a {
+        padding: 6px 8px;
+        border-radius: 8px;
+    }
+    .dropdown-menu {
+        position: static;      /* valt netjes onder de parent */
+        box-shadow: none;
+        padding: 6px 0 0 0;
+    }
+    .dropdown:hover .dropdown-menu { display: block; } /* tap = ook hover op mobiel */
+    .dropdown-menu li { padding: 0; }
+
+    /* Hero nog compacter */
+    .hero { height: 44vh; }
+    .hero-overlay {
+        padding: 16px 18px;
+        max-width: 96%;
+    }
+    .hero-title { font-size: 1.8rem; }
+    .hero-subtitle { font-size: .9rem; }
+
+    /* Algemene secties */
+    .info-section { padding: 24px 14px; gap: 18px; }
+    .intro-text { padding: 32px 16px; }
+    .features { padding: 34px 14px; }
+    .features h2 { font-size: 1.6rem; }
+
+    /* Kaarten / blokken */
+    .info-card { max-width: 100%; padding: 20px 18px; }
+
+    /* Gallery in small tiles */
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 12px;
+        padding: 22px 14px;
+    }
+
+    /* Contact blok */
+    .contact-container {
+        margin: 26px auto 0;
+        padding: 20px 14px;
+        gap: 16px;
+        border-radius: 20px;
+    }
+    .contact-info h3 { font-size: 1.6rem; margin-bottom: 12px; }
+    .contact-info p { font-size: 1rem; }
+    .contact-info .btn {
+        width: 100%;
+        padding: 14px 18px;
+        font-size: 1.05rem;
+    }
+    .contact-image { flex: 1 1 100%; }
+    .contact-image img { width: 100%; max-height: 240px; }
+
+    /* Formulieren: kolom i.p.v. rijen, inputs 100% */
+    #infoForm {
+        padding: 22px 16px !important;
+    }
+    #infoForm > div[style*="display:flex"] {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+    #infoForm input,
+    #infoForm textarea,
+    #infoForm select,
+    #infoForm button {
+        width: 100%;
+    }
+    .btn {
+        padding: 14px 18px;
+        font-size: 1.05rem;
+        border-radius: 10px;
+    }
+
+    /* FullCalendar: titel/toolbars kleiner, geen horizontale scroll */
+    #bigCalendar { padding: 10px; }
+    .fc .fc-toolbar.fc-header-toolbar {
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+    .fc .fc-toolbar-title { font-size: 1.1rem; }
+    .fc .fc-button { padding: 4px 8px; font-size: .9rem; }
+    .fc .fc-daygrid-day-number { font-size: .85rem; padding: 4px; }
+
+    /* Divider compacter */
+    .divider { margin: 24px auto; }
+}
+
+/* Zorg dat alle afbeeldingen nooit ‘uit het scherm’ lopen */
+img { max-width: 100%; height: auto; }
+
+/* Voorkom horizontale scroll op kleine schermen */
+html, body { max-width: 100%; overflow-x: hidden; }
 
 
 
