@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px 25px 50px 25px;
+    background-color : #0A3A7D;
+}
+header section div:first-child {
+    color: white;
+}
+
+.opties{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    color: white;
+}
+.opties div{
+    display: flex;
+    margin-right: 30px;
+}
+.opties a{
+    color: white;
+    text-decoration: none;
+}
+.opties a:hover{
+    color: lightcyan;
+}
+main{
+    background-color: black;
+}
+main section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+main section div{
+    flex: 1;
+    padding: 150px 0 150px;
+}
+main h1{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.keuze1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: white;
+}
+.keuze1:hover{
+    background-color: darkred;
+}
+.keuze2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    color: white;
+}
+.keuze2:hover{
+    background-color: darkblue;
+}
+.fuckyou{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: black;
+}

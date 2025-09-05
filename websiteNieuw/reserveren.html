@@ -8,6 +8,7 @@
     <!-- JOUW STYLES -->
     <link rel="stylesheet" href="styles/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
     <!-- Flatpickr (mooie datepicker) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -50,14 +51,8 @@
         <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="omgeving.html">Omgeving</a></li>
+            <li><a href="sport.html">Sport</a></li>
             <li><a href="reserveren.html" class="active">Reserveren</a></li>
-            <!--<li class="dropdown">
-                 <a href="#">In de buurt</a>
-                 <ul class="dropdown-menu">
-                     <li><a href="beachlife.html">Beachlife</a></li>
-                     <li><a href="cultuur.html">Cultuur</a></li>
-                 </ul>
-             </li>-->
              <li><a href="reisinformatie.html">Reisinformatie</a></li>
          </ul>
      </nav>
@@ -128,8 +123,8 @@
         </div>
 
         <div style="margin-top:18px;">
-            <label for="bericht">Bericht <span style="color:#e63946">*</span></label>
-            <textarea id="bericht" name="bericht" rows="4" style="width:100%;" required></textarea>
+            <label for="bericht">Bericht <span style="color:#e63946"></span></label>
+            <textarea id="bericht" name="bericht" rows="4" style="width:100%;"></textarea>
         </div>
 
         <div style="text-align:center; margin-top:24px;">
@@ -142,8 +137,10 @@
     <div class="contact-container">
         <div class="contact-info">
             <h3>Interesse? Neem contact op.</h3>
-            <p>Stuur een bericht of contacteer ons telefonisch voor meer informatie.</p>
-            <p><strong>+32 478 88 76 99</strong><br>info@casamariposa.be</p>
+            <p>Contacteer ons via het invulformulier of per mail / of via sociale media.</p>
+            <p>
+                <strong>info@casamariposa.be</strong>
+            </p>
             <div class="socials">
                 <a href="https://www.facebook.com/profile.php?id=61579181528028"><img src="images/Facebook_Logo_2023.png" alt="Facebook" id="facebook"></a>
                 <a href="https://www.instagram.com/casamariposa.be?igsh=cGpudDJ5M2syZjFp"><img src="images/Instagram_icon.png" alt="Instagram" id="instagram"></a>
@@ -157,49 +154,139 @@
     </div>
 </section>
 <hr class="divider">
-<p class="disclaimer">Huisdieren zijn niet toegelaten in het domein en het is ook verboden om te roken in het hele appartement. Op het terras mag er wel gerookt worden.</p>
-
-<!-- ÉÉN scriptblok dat alles regelt -->
+<p class="disclaimer">&copy; Website gemaakt door Dries Taeleman — Contact: +32 468 04 79 21 | driestaeleman47@gmail.com</p>
 <script>
-    // ===== CONFIG =====
-    const WORKER_BASE = "https://casamariposa.driestaeleman47.workers.dev";
+    /* =========================
+       CONFIG
+       ========================= */
+    const WORKER_BASE = "https://casamariposa.driestaeleman47.workers.dev"; // ← jouw Cloudflare Worker base
+    const GAS_URL     = "https://script.google.com/macros/s/AKfycbxpZmjbqb-wZ146aaFRWFXDhPNwcKGZCcqIngJ9CaT50NDBY5f08HICz6YB_YcoKRG7/exec";              // ← jouw Google Apps Script Web App URL (eindigt op /exec)
     const CAL_RANGE_MONTHS = 12;
-
-    // ===== HELPERS =====
-    const toISO = d => new Date(d.getTime() - d.getTimezoneOffset()*60000).toISOString().slice(0,10);
+    const EXTRA_BUSY_DATES = [
+        "2025-9-9",
+        "2025-9-10",
+        "2025-9-11",
+        "2025-9-12",
+        "2025-9-13",
+        "2025-9-14",
+        "2025-9-15",
+        "2025-9-16",
+        "2025-9-17",
+        "2025-9-18",
+        "2025-9-19",
+        "2025-9-20",
+        "2025-9-21",
+        "2025-9-22",
+        "2025-9-23",
+        "2025-9-24",
+        "2025-9-25",
+        "2025-9-26",
+        "2025-9-27",
+        "2025-9-28",
+        "2025-9-29",
+        "2025-9-30",
+        "2025-10-1",
+        "2025-10-2",
+        "2025-10-3",
+        "2025-10-4",
+        "2025-10-5",
+        "2025-10-6",
+        "2025-10-7",
+        "2025-10-8",
+        "2025-10-9",
+        "2025-10-10",
+        "2025-10-11",
+        "2025-10-12",
+        "2025-10-26",
+        "2025-10-27",
+        "2025-10-28",
+        "2025-10-29",
+        "2025-10-30",
+        "2025-10-31",
+        "2025-12-23",
+        "2025-12-24",
+        "2025-12-25",
+        "2025-12-26",
+        "2025-12-27",
+        "2025-12-28",
+        "2025-12-29",
+        "2025-12-30",
+        "2026-5-9",
+        "2026-5-10",
+        "2026-5-11",
+        "2026-5-12",
+        "2026-5-13",
+        "2026-5-14",
+        "2026-5-15",
+        "2026-5-16",
+        "2026-8-15",
+        "2026-8-16",
+        "2026-8-17",
+        "2026-8-18",
+        "2026-8-19",
+        "2026-8-20",
+        "2026-8-21",
+        "2026-8-22",
+    ];
+    /* =========================
+       HELPERS
+       ========================= */
     const qs = sel => document.querySelector(sel);
+    const toISO = d => new Date(d.getTime() - d.getTimezoneOffset()*60000).toISOString().slice(0,10);
 
-    const todayLocal = new Date();
-    todayLocal.setHours(0,0,0,0);
+    const todayLocal = new Date(); todayLocal.setHours(0,0,0,0);
     const TODAY_STR = toISO(todayLocal);
 
-    // Start
+    /* =========================
+       MAIN
+       ========================= */
     document.addEventListener('DOMContentLoaded', init);
 
     async function init() {
-        const today = new Date();
-        const to = new Date(today); to.setMonth(to.getMonth() + CAL_RANGE_MONTHS);
+        try {
+            // 1) Busy ranges laden voor de grote kalender en flatpickr
+            const today = new Date();
+            const to = new Date(today); to.setMonth(to.getMonth() + CAL_RANGE_MONTHS);
+            const busyRanges = await getBusyRanges(toISO(today), toISO(to)); // [{start, end(excl)}]
 
-        const busyRanges = await getBusyRanges(toISO(today), toISO(to)); // [{start, end(excl)}]
-        renderBigCalendar(busyRanges);
+            renderBigCalendar(busyRanges);
+            const busyDates = expandToDates(busyRanges); // Set('YYYY-MM-DD')
+            setupFlatpickrs(busyDates);
 
-        const busyDates = expandToDates(busyRanges); // Set('YYYY-MM-DD')
-        setupFlatpickrs(busyDates);
-        setupSubmit();
+            // 2) Submit handler instellen (één keer)
+            setupSubmit();
+        } catch (err) {
+            console.error("Init error:", err);
+        }
     }
 
+    /* =========================
+       DATA LADEN
+       ========================= */
     async function getBusyRanges(from, to) {
         const url = `${WORKER_BASE}/busy?from=${from}&to=${to}`;
         const res = await fetch(url, { cache: "no-store" });
         const data = await res.json(); // { busy: [ {from, to} ] }
         const list = data.busy || [];
-        // 'to' is inclusief → voor FullCalendar end exclusief maken (+1 dag)
-        return list.map(r => {
+
+        const ranges = list.map(r => {
             const end = new Date(r.to); end.setDate(end.getDate() + 1);
             return { start: r.from, end: toISO(end) };
         });
+
+        // 👇 extra manueel opgegeven datums toevoegen
+        EXTRA_BUSY_DATES.forEach(dateStr => {
+            const d = new Date(dateStr);
+            const end = new Date(d); end.setDate(end.getDate() + 1);
+            ranges.push({ start: toISO(d), end: toISO(end) });
+        });
+
+        return ranges;
     }
 
+    /* =========================
+       UI: FULLCALENDAR
+       ========================= */
     function renderBigCalendar(busyRanges) {
         const calendarEl = document.getElementById('bigCalendar');
 
@@ -210,7 +297,6 @@
             display: "background",
             color: "#e63946",
             textColor: "#e63946",
-            extendedProps: { tooltip: "Deze datum is al bezet" }
         }));
 
         const calendar = new FullCalendar.Calendar(calendarEl, {
@@ -222,7 +308,6 @@
             dayMaxEventRows: true,
             events: busyEvents,
 
-            // ✅ voeg class toe met ingebouwde vlag
             dayCellClassNames(arg) {
                 return arg.isPast ? ['past-disabled'] : [];
             },
@@ -231,7 +316,7 @@
                 const dateStr = toISO(arg.date);
                 const isBusy = busyRanges.some(r => dateStr >= r.start && dateStr < r.end);
 
-                // tooltip
+                // simpele tooltip
                 arg.el.style.position = 'relative';
                 const tip = document.createElement('div');
                 tip.textContent = arg.isPast
@@ -247,13 +332,11 @@
                 arg.el.addEventListener('mouseenter', ()=> tip.style.opacity = '1');
                 arg.el.addEventListener('mouseleave', ()=> tip.style.opacity = '0');
 
-                // ✅ forceer background op alle relevante lagen (voor thema's die overschrijven)
+                // verleden visueel dicht
                 if (arg.isPast) {
                     arg.el.style.background = '#eceff3';
-                    const frame = arg.el.querySelector('.fc-daygrid-day-frame');
-                    if (frame) frame.style.background = '#eceff3';
-                    const bg = arg.el.querySelector('.fc-daygrid-day-bg');
-                    if (bg) bg.style.background = '#eceff3';
+                    const frame = arg.el.querySelector('.fc-daygrid-day-frame'); if (frame) frame.style.background = '#eceff3';
+                    const bg    = arg.el.querySelector('.fc-daygrid-day-bg');    if (bg)    bg.style.background = '#eceff3';
                     arg.el.style.cursor = 'not-allowed';
                     return;
                 }
@@ -278,11 +361,14 @@
         calendar.render();
     }
 
+    /* =========================
+       HULP: Ranges → losse datums
+       ========================= */
     function expandToDates(busyRanges) {
         const s = new Set();
         busyRanges.forEach(r => {
             const start = new Date(r.start);
-            const end = new Date(r.end); // exclusief
+            const end   = new Date(r.end); // exclusief
             for (let d = new Date(start); d < end; d.setDate(d.getDate() + 1)) {
                 s.add(toISO(d));
             }
@@ -290,6 +376,9 @@
         return s;
     }
 
+    /* =========================
+       UI: FLATPICKR
+       ========================= */
     function setupFlatpickrs(busyDates) {
         const isBusy = (date) => busyDates.has(toISO(date));
         const aankomstEl = qs('#aankomst');
@@ -354,58 +443,83 @@
         });
     }
 
+    /* =========================
+       SUBMIT + LOGGING
+       ========================= */
     function setupSubmit() {
         const form = document.getElementById('infoForm');
+        if (!form) return;
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            const start = form.aankomst.value;
-            const end   = form.vertrek.value;
-            if (!start || !end || end <= start) {
-                alert("Controleer de datums (vertrek moet na aankomst liggen).");
-                return;
-            }
+            const btn = form.querySelector('button[type="submit"]');
+            if (btn) { btn.disabled = true; btn.textContent = "Versturen…"; }
 
-            const payload = {
-                naam: form.naam.value.trim(),
-                email: form.email.value.trim(),
-                telefoon: form.telefoon.value.trim(),
-                personen: form.personen.value,
-                bericht: form.bericht.value.trim(),
-                start,
-                end
-            };
-            const subject = encodeURIComponent(`Nieuwe reserveringsaanvraag van ${payload.naam}`);
-            const body = encodeURIComponent(
-                `Naam: ${payload.naam}
+            try {
+                const start = form.aankomst.value;
+                const end   = form.vertrek.value;
+                if (!start || !end || end <= start) {
+                    alert("Controleer de datums (vertrek moet na aankomst liggen).");
+                    return;
+                }
+
+                const payload = {
+                    naam: form.naam.value.trim(),
+                    email: form.email.value.trim(),
+                    telefoon: form.telefoon.value.trim(),
+                    personen: form.personen.value,
+                    aankomst: start,
+                    vertrek: end,
+                    bericht: form.bericht.value.trim()
+                };
+
+                // 1) LOG naar Cloudflare Worker
+                const workerReq = fetch(`${WORKER_BASE}/request`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload),
+                    cache: "no-store",
+                });
+
+                // 2) LOG naar Google Apps Script (fire-and-forget; no-cors)
+                const gasReq = fetch(GAS_URL, {
+                    method: "POST",
+                    mode: "no-cors",  // voorkomt CORS errors; response is 'opaque'
+                    headers: { "Content-Type": "text/plain;charset=utf-8" }, // simple request
+                    body: JSON.stringify(payload),
+                });
+
+                // Wacht op beide zonder te falen op één van de twee
+                await Promise.allSettled([workerReq, gasReq]);
+
+                // 3) Feedback + reset
+                alert("✅ Aanvraag verstuurd en gelogd!");
+                form.reset();
+
+                // 4) Daarna mailto (zodat logging niet wordt afgebroken door navigatie)
+                const subject = encodeURIComponent(`Nieuwe reserveringsaanvraag van ${payload.naam}`);
+                const body = encodeURIComponent(
+                    `Naam: ${payload.naam}
 Telefoon: ${payload.telefoon}
 E-mail: ${payload.email}
 Aantal personen: ${payload.personen}
-Aankomst: ${payload.start}
-Vertrek: ${payload.end}
+Aankomst: ${payload.aankomst}
+Vertrek: ${payload.vertrek}
 
 Bericht:
 ${payload.bericht}`
-            );
-            window.location.href = `mailto:evalaus@hotmail.com?subject=${subject}&body=${body}`;
+                );
+                window.location.href = `mailto:info@casamariposa.be?subject=${subject}&body=${body}`;
 
-            try {
-                const res = await fetch(`${WORKER_BASE}/request`, {
-                    method: 'POST',
-                    headers: { 'Content-Type':'application/json' },
-                    body: JSON.stringify(payload)
-                });
-                if (!res.ok) throw new Error(await res.text());
-                alert("Aanvraag verstuurd! Je ontvangt snel een bevestiging.");
-                form.reset();
             } catch (err) {
                 console.error(err);
-                alert("Kon de aanvraag niet opslaan. Probeer later opnieuw.");
+                alert("⚠️ Er ging iets mis bij het versturen. Probeer later opnieuw.");
+            } finally {
+                if (btn) { btn.disabled = false; btn.textContent = "Aanvraag indienen"; }
             }
         });
     }
-
 </script>
 </body>
 </html>

@@ -1,0 +1,27 @@
+.container img{
+        max-width: 100px;
+    }
+    #download{
+        color: black;
+        background-color: aliceblue;
+        border: 1px solid black;
+        border-radius: 15px;
+    }
+    #download:hover{
+        background-color: red;
+    }
+    .section{
+        display: flex;
+        flex-direction: row;
+    }
+    .container div{
+        display: grid;
+        grid-template-columns: 200px 200px 100px 100px 100px;
+
+    }
+.cards{
+    display:grid;
+    gap: 12px;
+    grid-template-columns: 1fr;            /* gsm: 1 kolom */
+    align-items: start;                     /* inhoud boven in elke cel */
+}

@@ -1,0 +1,62 @@
+.login {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* twee kolommen */
+    gap: 10px;                     /* ruimte tussen de velden */
+    max-width: 500px;              /* max breedte */
+    margin: 0 auto;                /* centreren */
+    border: darkblue solid 1px;
+    border-radius: 10px;
+}
+.login input{
+    margin: 5px;
+}
+.login button{
+    grid-column: span 2;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+
+}
+#mijnInput{
+    padding-bottom: 50px;
+    margin: 0 auto;
+
+}
+#reviews{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.reviewDiv{
+    border: darkblue solid 1px;
+    border-radius: 10px;
+    margin: 20px;
+    background-color: royalblue;
+}
+.hdrnaam{
+    color: black;
+    font-weight: bold;
+    margin-right: 2px;
+    font-size: 20px;
+}
+.hdremail{
+    color: darkgrey;
+    font-size: 10px;
+    margin-top: 8.5px;
+}
+.hdrtel{
+    color: darkgrey;
+    font-size: 10px;
+    margin-top: 8.5px;
+}
+.hdr{
+    display: flex;
+    justify-content: space-evenly;
+}
+.reviewMsg{
+    padding: 10px 25px;
+}
+.toe{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 13px;
+}

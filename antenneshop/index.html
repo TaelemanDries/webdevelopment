@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AntenneShop – Gouden Header (Responsief, Mobile‑First)</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* =========================================================
+       0) Variabelen & Basis (MOBILE FIRST)
+       ========================================================= */
+    :root{
+      /* Kleuren */
+      --gold-dark:#8c6b1f;   /* donker goud links */
+      --gold-mid:#d4af37;    /* midden goud */
+      --gold-light:#f6e39b;  /* licht goud rechts */
+      --text:#191919;
+      --on-dark:#fff;
+
+      /* Layout */
+      --container: 1100px;
+      --radius: 18px;
+      --shadow: 0 8px 28px rgba(0,0,0,.12);
+
+      /* Header-hoogte per breakpoint (wordt overschreven lager) */
+      --header-h: 140px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;font-family:Outfit,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:#fff}
+    a{color:inherit;text-decoration:none}
+
+    /* Container helper */
+    .wrap{max-width:var(--container);margin:0 auto;padding:0 16px}
+
+    /* =========================================================
+       1) Header – schaalvast goud + boog, los van viewport-breedte
+       ========================================================= */
+    .site-header{
+      position:relative; isolation:isolate; overflow:hidden;
+      background: linear-gradient(90deg, var(--gold-mid) 0%, var(--gold-light) 60%, #fff2b8 100%);
+      height: var(--header-h);
+      box-shadow: var(--shadow);
+      border-bottom-left-radius: var(--radius);
+      border-bottom-right-radius: var(--radius);
+    }
+
+    /* Donker-gouden booglaag (SVG), schaalt mee, zonder "sweet spot" afhankelijkheid */
+    .header-curve{position:absolute; inset:0; z-index:0; pointer-events:none}
+    .header-curve svg{width:140%; height:100%; display:block; transform:translateX(-10%)}
+
+    /* Inhoud */
+    .header-inner{position:relative; z-index:1; height:100%;}
+    .header-row{
+      height:100%; display:flex; align-items:center; gap:14px;
+    }
+
+    /* Brand */
+    .brand{display:flex; align-items:center; gap:10px; padding:8px 12px; border-radius:14px;
+      background: linear-gradient(135deg, #a68228, var(--gold-dark)); color:var(--on-dark);
+      box-shadow: 0 4px 14px rgba(0,0,0,.22);
+    }
+    .brand img{width:38px;height:38px;object-fit:contain;filter:drop-shadow(0 2px 2px rgba(0,0,0,.25))}
+    .brand .title{font-weight:700;letter-spacing:.2px}
+    .brand .subtitle{font-size:.8rem;opacity:.9}
+
+    /* Nav – mobile first: horizontale scrollchips zonder hamburger (geen JS nodig) */
+    nav{margin-left:auto; display:flex; gap:10px; overflow:auto; padding-bottom:4px}
+    nav a{
+      white-space:nowrap; padding:8px 12px; border-radius:12px;
+      background: rgba(255,255,255,.35);
+      border:1px solid rgba(0,0,0,.06);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.35);
+      font-weight:600; transition:transform .16s ease, background .16s ease;
+    }
+    nav a:hover{transform:translateY(-1px); background:rgba(255,255,255,.55)}
+
+    /* =========================================================
+       2) Hero (demo)
+       ========================================================= */
+    .hero{padding:28px 0 48px}
+    .hero h1{font-size:clamp(22px, 5vw, 40px); margin:0 0 8px}
+    .hero p{margin:0; max-width:65ch; opacity:.9}
+
+    /* =========================================================
+       3) Breakpoints – duidelijk opgesplitst
+       ---------------------------------------------------------
+       - Mobile:   0px–599px (default styles hierboven)
+       - Tablet:   ≥600px
+       - Desktop:  ≥900px
+       - Wide:     ≥1280px
+       ========================================================= */
+
+    /* Tablet */
+    @media (min-width:600px){
+      :root{ --header-h: 170px; }
+      .brand img{width:42px;height:42px}
+      nav a{padding:10px 14px}
+      .header-curve svg{width:130%; transform:translateX(-6%)}
+    }
+
+    /* Desktop */
+    @media (min-width:900px){
+      :root{ --header-h: 190px; }
+      .brand{gap:12px; padding:10px 14px}
+      .brand .subtitle{font-size:.85rem}
+      nav{gap:12px}
+      .header-curve svg{width:120%; transform:translateX(-4%)}
+    }
+
+    /* Wide & groot scherm (geen uitrekken, compositie blijft) */
+    @media (min-width:1280px){
+      :root{ --header-h: 220px; --container: 1200px; }
+      .header-curve svg{width:110%; transform:translateX(-2%)}
+    }
+    /* =========================================================
+     X) Config: instelbare MIN‑WIDTH (voor consistente look)
+     ---------------------------------------------------------
+     Zet hieronder je minimale ontwerpbreedte. Op toestellen
+     smaller dan dit zal de pagina horizontaal scrollen i.p.v.
+     dat de layout “inzakt”.
+     Voor moderne smartphones is 360–390px een veilige waarde.
+     ========================================================= */
+    :root{ --min-viewport: 380px; }
+    html, body{ min-width: var(--min-viewport); }
+
+    /* Compactere mobiele styling (nettere knoppen, minder schaduw) */
+    @media (max-width:599px){
+      .site-header{ --header-h: 150px; }
+      .brand{ padding:8px 10px; box-shadow:0 3px 10px rgba(0,0,0,.18); }
+      .brand img{ width:34px; height:34px }
+      nav{ gap:8px; padding-bottom:2px }
+      nav a{ padding:7px 10px; border-radius:10px; background:rgba(255,255,255,.28); box-shadow:none }
+    }
+
+    /* Optioneel: cap lettergroottes extra op kleinste schermen */
+    @media (max-width:380px){
+      .hero h1{ font-size: clamp(20px, 6vw, 30px); }
+      .hero p{ font-size: clamp(14px, 3.6vw, 16px); }
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <!-- Boog: donker goud dat elegant uitwaaiert vanaf links -->
+  <div class="header-curve" aria-hidden="true">
+    <svg viewBox="0 0 1440 300" preserveAspectRatio="none" role="presentation">
+      <defs>
+        <linearGradient id="goldDark" x1="0" x2="1">
+          <stop offset="0%" stop-color="#8c6b1f"/>
+          <stop offset="100%" stop-color="#a68128"/>
+        </linearGradient>
+      </defs>
+      <!-- Een brede S‑curve die op élke breedte goed oogt -->
+      <path d="M0,0 C 180,30 280,110 520,140 C 780,172 980,110 1200,105 C 1340,102 1400,118 1440,135 L1440,0 Z"
+            fill="url(#goldDark)" opacity="0.95"/>
+    </svg>
+  </div>
+
+  <div class="header-inner wrap">
+    <div class="header-row">
+      <a class="brand" href="#">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Radio_tower_icon.svg" alt="AntenneShop logo"/>
+        <div>
+          <div class="title">AntenneShop</div>
+          <div class="subtitle">Signaal • TV • Internet</div>
+        </div>
+      </a>
+
+      <!-- Hamburger voor mobiel -->
+      <button class="menu-toggle" aria-controls="mobile-drawer" aria-expanded="false" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Inline nav voor desktop -->
+      <nav class="nav-inline">
+        <a href="#producten">Producten</a>
+        <a href="#installatie">Installatie</a>
+        <a href="#merken">Merken</a>
+        <a href="#cases">Cases</a>
+        <a href="#support">Support</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<!-- Drawer + overlay voor mobiel -->
+<div class="overlay" hidden></div>
+<aside id="mobile-drawer" class="drawer" aria-hidden="true">
+  <nav class="nav-drawer">
+    <a href="#producten">Producten</a>
+    <a href="#installatie">Installatie</a>
+    <a href="#merken">Merken</a>
+    <a href="#cases">Cases</a>
+    <a href="#support">Support</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</aside>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Kristalhelder signaal, professioneel geplaatst</h1>
+    <p>Van DVB‑T2 buitenantennes tot 4G/5G richtantennes en multiswitches. Wij adviseren, leveren en installeren met meetrapport.</p>
+  </section>
+</main>
+
+<script>
+  // ===== Mobile drawer: open/close + swipe from right edge =====
+  const btn = document.querySelector('.menu-toggle');
+  const drawer = document.getElementById('mobile-drawer');
+  const overlay = document.querySelector('.overlay');
+
+  function openDrawer(){
+    drawer.classList.add('open');
+    overlay.hidden = false;
+    btn.setAttribute('aria-expanded','true');
+    drawer.setAttribute('aria-hidden','false');
+  }
+  function closeDrawer(){
+    drawer.classList.remove('open');
+    overlay.hidden = true;
+    btn.setAttribute('aria-expanded','false');
+    drawer.setAttribute('aria-hidden','true');
+  }
+  btn.addEventListener('click', ()=> {
+    drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+  });
+  overlay.addEventListener('click', closeDrawer);
+
+  // ESC om te sluiten
+  window.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeDrawer(); });
+
+  // Swipe from right edge
+  let startX = null, currentX = null, tracking = false;
+  const edge = 24; // px van de rechterrand
+
+  window.addEventListener('touchstart', (e)=>{
+    const touch = e.touches[0];
+    const vw = window.innerWidth;
+    // Start swipen als je aan de rechterrand begint of als drawer open is
+    if(drawer.classList.contains('open') || (vw - touch.clientX) < edge){
+      tracking = true;
+      startX = touch.clientX;
+      drawer.style.transition = 'none';
+    }
+  }, {passive:true});
+
+  window.addEventListener('touchmove', (e)=>{
+    if(!tracking) return;
+    const touch = e.touches[0];
+    currentX = touch.clientX;
+    const vw = window.innerWidth;
+    const drag = Math.min(0, currentX - startX); // negatief naar links
+    // visueel meeschuiven
+    const tx = drawer.classList.contains('open') ? Math.min(0, drag) : Math.min(0, -(vw - startX) + (currentX - startX));
+    drawer.style.transform = `translateX(${Math.min(0, tx)}px)`;
+  }, {passive:true});
+
+  window.addEventListener('touchend', ()=>{
+    if(!tracking) return;
+    tracking = false;
+    drawer.style.transition = '';
+    const vw = window.innerWidth;
+    const traveled = startX !== null && currentX !== null ? (currentX - startX) : 0;
+    // drempel: 80px beweging
+    if(drawer.classList.contains('open')){
+      if(traveled < -80) closeDrawer(); else openDrawer();
+    }else{
+      if(traveled > 80) openDrawer(); else closeDrawer();
+    }
+    drawer.style.transform = '';
+    startX = currentX = null;
+  });
+</script>
+</body>
+</html>
